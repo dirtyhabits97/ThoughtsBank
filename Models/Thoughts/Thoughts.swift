@@ -12,8 +12,13 @@ struct Thought {
     let id: String
     let title: String
     let text: String
-    let date: Date
+    let dateString: String
     let author: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, text, author
+        case dateString = "date"
+    }
 }
 
 extension Thought: Decodable {}

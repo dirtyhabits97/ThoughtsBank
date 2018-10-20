@@ -12,7 +12,7 @@ import LeanNetworkKit
 class ThoughtListResource: ApiResource {
     typealias Model = [Thought]
     
-    var urlString: String { return "http://localhost:3000/thoughts" }
+    var urlString: String { return "http://localhost:3000/u/thoughts" }
     var httpMethod: String { return "GET" }
     
 }

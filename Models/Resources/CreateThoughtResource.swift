@@ -13,7 +13,7 @@ class CreateThoughtResource: ApiResourceEncodable {
     typealias Model = EmptyResponse
     typealias Body = CreateThoughtBody
 
-    var urlString: String { return "http://localhost:3000/new" }
+    var urlString: String { return "http://localhost:3000/u/new" }
     var httpMethod: String { return "POST" }
     
     var body: Body
