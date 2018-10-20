@@ -10,6 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - Models
+    
+    public var viewModel: LoginViewModelProtocol!
+    
     // MARK: - UI Elements
     
     private weak var loginView: LoginView! { return (view as! LoginView) }
@@ -29,6 +33,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupBindings()
     }
     
     private func setupView() {
@@ -36,6 +41,18 @@ class LoginViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         loginButton.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
         signupButton.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
+    }
+    
+    private func setupBindings() {
+        viewModel.isLoading.bind(to: self) { (self, isLoading) in
+            print("Login - \(isLoading ? "started" : "stopped") loading")
+        }
+        viewModel.showError.bind(to: self) { (self, error) in
+            print("Login - \(error ? "An" : "No") error occurred")
+        }
+        viewModel.updateForm.bind(to: self) { (self, _) in
+            self.navigateToThoughtList()
+        }
     }
     
     // MARK: - User Interaction
@@ -51,7 +68,7 @@ class LoginViewController: UIViewController {
             present(alert, animated: true)
             return
         }
-        login(with: Credentials(username: username, password: password))
+        viewModel.doLogin(with: Credentials(username: username, password: password))
     }
     
     @objc func signupButtonPressed() {

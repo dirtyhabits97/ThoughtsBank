@@ -43,9 +43,9 @@
 		EA3DDC17216AA84000D2DE91 /* SignUpResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC16216AA84000D2DE91 /* SignUpResource.swift */; };
 		EA3DDC19216AA8D200D2DE91 /* SignUpViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC18216AA8D200D2DE91 /* SignUpViewController+Networking.swift */; };
 		EA71FB60217B087000DB91C5 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB5F217B087000DB91C5 /* Observables.swift */; };
+		EA71FB62217B997200DB91C5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB61217B997200DB91C5 /* LoginViewModel.swift */; };
 		EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A832169D52A004F9F3F /* LoginViewController.swift */; };
 		EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A862169D5B2004F9F3F /* Credentials.swift */; };
-		EA961A892169D76E004F9F3F /* LoginViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A882169D76E004F9F3F /* LoginViewController+Networking.swift */; };
 		EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A8A2169D7A0004F9F3F /* LoginResource.swift */; };
 		EAFACE7F21603BAE000DA0E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFACE7E21603BAE000DA0E4 /* AppDelegate.swift */; };
 		EAFACE8621603BAF000DA0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFACE8521603BAF000DA0E4 /* Assets.xcassets */; };
@@ -100,9 +100,9 @@
 		EA3DDC16216AA84000D2DE91 /* SignUpResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResource.swift; sourceTree = "<group>"; };
 		EA3DDC18216AA8D200D2DE91 /* SignUpViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+Networking.swift"; sourceTree = "<group>"; };
 		EA71FB5F217B087000DB91C5 /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
+		EA71FB61217B997200DB91C5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EA961A832169D52A004F9F3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA961A862169D5B2004F9F3F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		EA961A882169D76E004F9F3F /* LoginViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Networking.swift"; sourceTree = "<group>"; };
 		EA961A8A2169D7A0004F9F3F /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
 		EAFACE7B21603BAE000DA0E4 /* LeanNetworkKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanNetworkKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFACE7E21603BAE000DA0E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,8 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				EA961A832169D52A004F9F3F /* LoginViewController.swift */,
-				EA961A882169D76E004F9F3F /* LoginViewController+Networking.swift */,
 				EA3DDC04216A877000D2DE91 /* LoginView.swift */,
+				EA71FB61217B997200DB91C5 /* LoginViewModel.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -375,7 +375,6 @@
 				EA1AA0A621726E8700829667 /* ScrollableView.swift in Sources */,
 				EA3DDC002169E20500D2DE91 /* UITextField+Extensions.swift in Sources */,
 				EA1AA0B12172BF5800829667 /* NSLayoutConstraint+Extensions.swift in Sources */,
-				EA961A892169D76E004F9F3F /* LoginViewController+Networking.swift in Sources */,
 				EAFACE7F21603BAE000DA0E4 /* AppDelegate.swift in Sources */,
 				EA1AA0B42172D0D300829667 /* Thoughts.swift in Sources */,
 				EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */,
@@ -406,6 +405,7 @@
 				EA3DDC05216A877000D2DE91 /* LoginView.swift in Sources */,
 				EA3DDC07216A88F000D2DE91 /* UIButton+Extensions.swift in Sources */,
 				EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */,
+				EA71FB62217B997200DB91C5 /* LoginViewModel.swift in Sources */,
 				EA3DDC15216AA7F400D2DE91 /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

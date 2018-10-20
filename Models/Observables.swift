@@ -12,7 +12,7 @@ class Observable<Observed> {
     
     var completion: ((Observed) -> Void)?
     
-    func bind(to observer: AnyObject, completion: @escaping (AnyObject, Observed) -> Void) {
+    func bind<Observer: AnyObject>(to observer: Observer, completion: @escaping (Observer, Observed) -> Void) {
         self.completion = { [weak observer] observed in
             guard let obs = observer else { return }
             completion(obs, observed)
