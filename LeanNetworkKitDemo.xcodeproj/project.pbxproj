@@ -22,7 +22,6 @@
 		EA1AA0BF2173B4CF00829667 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0BE2173B4CE00829667 /* UITextView+Extensions.swift */; };
 		EA1AA0C22173B90700829667 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0C12173B90700829667 /* Array+Extensions.swift */; };
 		EA1AA0C42173B9A600829667 /* CreateThoughtResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0C32173B9A600829667 /* CreateThoughtResource.swift */; };
-		EA1AA0C62173BC0000829667 /* NewThoughtViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0C52173BC0000829667 /* NewThoughtViewController+Networking.swift */; };
 		EA28F07C21607F1600FEBAB7 /* LeanToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFACE9A21603FDD000DA0E4 /* LeanToolsKit.framework */; };
 		EA28F07D21607F1600FEBAB7 /* LeanNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFACE9921603FDD000DA0E4 /* LeanNetworkKit.framework */; };
 		EA28F0802160841B00FEBAB7 /* LeanToolsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAFACE9A21603FDD000DA0E4 /* LeanToolsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -46,6 +45,7 @@
 		EA71FB66217BADDF00DB91C5 /* ThoughtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB65217BADDF00DB91C5 /* ThoughtListViewModel.swift */; };
 		EA71FB68217BB17000DB91C5 /* ThoughtListCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB67217BB17000DB91C5 /* ThoughtListCells.swift */; };
 		EA71FB6A217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB69217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift */; };
+		EA71FB6C217BC1CA00DB91C5 /* NewThoughtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */; };
 		EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A832169D52A004F9F3F /* LoginViewController.swift */; };
 		EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A862169D5B2004F9F3F /* Credentials.swift */; };
 		EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A8A2169D7A0004F9F3F /* LoginResource.swift */; };
@@ -86,7 +86,6 @@
 		EA1AA0BE2173B4CE00829667 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		EA1AA0C12173B90700829667 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		EA1AA0C32173B9A600829667 /* CreateThoughtResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThoughtResource.swift; sourceTree = "<group>"; };
-		EA1AA0C52173BC0000829667 /* NewThoughtViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewThoughtViewController+Networking.swift"; sourceTree = "<group>"; };
 		EA28F08B2160928E00FEBAB7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		EA3DDBFF2169E20500D2DE91 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		EA3DDC022169E53C00D2DE91 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		EA71FB65217BADDF00DB91C5 /* ThoughtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewModel.swift; sourceTree = "<group>"; };
 		EA71FB67217BB17000DB91C5 /* ThoughtListCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListCells.swift; sourceTree = "<group>"; };
 		EA71FB69217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+Extensions.swift"; sourceTree = "<group>"; };
+		EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtViewModel.swift; sourceTree = "<group>"; };
 		EA961A832169D52A004F9F3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA961A862169D5B2004F9F3F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		EA961A8A2169D7A0004F9F3F /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 			children = (
 				EA1AA0BA2172F46B00829667 /* NewThoughtViewController.swift */,
 				EA1AA0BC2172F4F500829667 /* NewThoughtView.swift */,
-				EA1AA0C52173BC0000829667 /* NewThoughtViewController+Networking.swift */,
+				EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */,
 			);
 			path = NewThought;
 			sourceTree = "<group>";
@@ -389,6 +389,7 @@
 				EA3DDC17216AA84000D2DE91 /* SignUpResource.swift in Sources */,
 				EA28F08C2160928E00FEBAB7 /* String+Extensions.swift in Sources */,
 				EA1AA09E2172573D00829667 /* ThoughtListView.swift in Sources */,
+				EA71FB6C217BC1CA00DB91C5 /* NewThoughtViewModel.swift in Sources */,
 				EA3DDC09216A89CF00D2DE91 /* UIView+Extensions.swift in Sources */,
 				EA1AA0B62172D19F00829667 /* ThoughtListResource.swift in Sources */,
 				EA3DDC0B216A8C7700D2DE91 /* UIAlertController+Extensions.swift in Sources */,
@@ -399,7 +400,6 @@
 				EA1AA0A32172669400829667 /* BaseView.swift in Sources */,
 				EA1AA099216DA1FF00829667 /* Collection+Extensions.swift in Sources */,
 				EA1AA0BF2173B4CF00829667 /* UITextView+Extensions.swift in Sources */,
-				EA1AA0C62173BC0000829667 /* NewThoughtViewController+Networking.swift in Sources */,
 				EA71FB64217B9D6200DB91C5 /* SignUpViewModel.swift in Sources */,
 				EA71FB68217BB17000DB91C5 /* ThoughtListCells.swift in Sources */,
 				EA3DDC11216A953D00D2DE91 /* SignUpViewController.swift in Sources */,

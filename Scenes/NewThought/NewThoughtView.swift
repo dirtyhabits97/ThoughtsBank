@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewThoughtView: VerticalScrollableView {
+class NewThoughtView: VerticalScrollableView, UITextViewDelegate {
     
     // MARK: - UI Elements
     
@@ -24,16 +24,14 @@ class NewThoughtView: VerticalScrollableView {
         containerView.addAndFill(withSubView: textView)
     }
     
-}
-
-extension NewThoughtView: UITextViewDelegate {
+    // MARK: - TextFieldDelegate methods
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let replacedText = (textView.text as NSString).replacingCharacters(in: range, with: text) as NSString
         let firstLineRange = replacedText.range(of: "\n")
         
         if firstLineRange.location >= range.location{
-            textView.typingAttributes = [.font: UIFont.boldSystemFont(ofSize: 32)]
+            textView.typingAttributes = [.font: UIFont.boldSystemFont(ofSize: 24)]
         } else {
             textView.typingAttributes = [.font: UIFont.systemFont(ofSize: 16)]
         }

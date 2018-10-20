@@ -10,6 +10,10 @@ import UIKit
 
 class NewThoughtViewController: UIViewController {
     
+    // MARK: - Models
+    
+    public var viewModel: NewThoughtViewModelProtocol!
+    
     // MARK: - UI Elements
     
     private weak var newThoughtView: NewThoughtView! { return (view as! NewThoughtView) }
@@ -24,6 +28,7 @@ class NewThoughtViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupBindings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +48,19 @@ class NewThoughtViewController: UIViewController {
         navigationItem.leftBarButtonItem = cancelButton
     }
     
+    private func setupBindings() {
+        viewModel.isLoading.bind(to: self) { (self, isLoading) in
+            print("New Thought - \(isLoading ? "started" : "stopped") loading")
+        }
+        viewModel.showError.bind(to: self) { (self, error) in
+            print("New Thought - \(error ? "An" : "No") error occurred")
+        }
+        viewModel.updateForm.bind(to: self) { (self, _) in
+            print("New Thought - Created a new thought")
+            self.dismiss(animated: true)
+        }
+    }
+    
     // MARK: - User Interaction
     
     @objc func creatThoughtButtonPressed() {
@@ -50,7 +68,7 @@ class NewThoughtViewController: UIViewController {
         var thoughtTextRaw = newThoughtTextView.text.split(separator: "\n", maxSplits: 1).map(String.init)
         guard let title = thoughtTextRaw.popFirst() else { return }
         let message = thoughtTextRaw.popFirst()
-        createNewThought(title: title, message: message)
+        viewModel.createNewThought(title: title, message: message)
     }
     
     @objc func cancelButtonPressed() {

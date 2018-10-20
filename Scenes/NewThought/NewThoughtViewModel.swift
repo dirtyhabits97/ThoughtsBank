@@ -1,5 +1,5 @@
 //
-//  ThoughtListViewModel.swift
+//  NewThoughtViewModel.swift
 //  LeanNetworkKitDemo
 //
 //  Created by Gonzalo Reyes Huertas on 10/20/18.
@@ -9,34 +9,34 @@
 import Foundation
 import LeanNetworkKit
 
-protocol ThoughtListViewModelProtocol {
+protocol NewThoughtViewModelProtocol {
     var isLoading: Observable<Bool> { get }
     var showError: Observable<Bool> { get }
-    var updateForm: Observable<[Thought]> { get }
+    var updateForm: Observable<Void> { get }
     
-    func loadData()
+    func createNewThought(title: String, message: String?)
 }
 
-class ThoughtListViewModel: ThoughtListViewModelProtocol {
+class NewThoughtViewModel: NewThoughtViewModelProtocol {
     
     // MARK: - Observables
     
     var isLoading = Observable<Bool>()
     var showError = Observable<Bool>()
-    var updateForm = Observable<[Thought]>()
+    var updateForm = Observable<Void>()
     
-    // MARK: - ThoughtList methods
+    // MARK: - Thought methods
     
-    func loadData() {
+    func createNewThought(title: String, message: String?) {
         isLoading.notify(with: true)
-        let resource = ThoughtListResource()
+        let resource = CreateThoughtResource(title: title, message: message)
         let request = ApiRequest(resource: resource)
         request.load { [unowned self] (result) in
             self.isLoading.notify(with: false)
             switch result {
-            case .success(let thoughts):
+            case .success:
                 self.showError.notify(with: false)
-                self.updateForm.notify(with: thoughts)
+                self.updateForm.notify(with: ())
             case .failure:
                 self.showError.notify(with: true)
             }

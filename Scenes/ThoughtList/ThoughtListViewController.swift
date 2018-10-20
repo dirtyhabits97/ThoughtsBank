@@ -69,7 +69,7 @@ class ThoughtListViewController: UIViewController, UITableViewDataSource {
             print("ThoughtList - \(error ? "An" : "No") error occurred")
         }
         viewModel.updateForm.bind(to: self) { (self, thoughts) in
-            print("Did load thoughts. Thoughts count: \(thoughts.count)")
+            print("ThoughtList - Did load thoughts. Thoughts count: \(thoughts.count)")
             self.displayedThoughts = thoughts
             self.tableView.reloadData()
         }
@@ -103,6 +103,8 @@ extension ThoughtListViewController {
     
     func navigateToNewThought() {
         let viewController = NewThoughtViewController()
+        let viewModel = NewThoughtViewModel()
+        viewController.viewModel = viewModel
         present(viewController.embedInNavController(), animated: true)
     }
     
