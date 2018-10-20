@@ -10,6 +10,10 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    // MARK: - Models
+    
+    public var viewModel: SignUpViewModelProtocol!
+    
     // MARK: - UI Elements
     
     private weak var signUpView: SignUpView! { return (view as! SignUpView) }
@@ -31,12 +35,25 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupBindings()
     }
     
     private func setupView() {
         view.backgroundColor = .white
         signupButton.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
+    }
+    
+    private func setupBindings() {
+        viewModel.isLoading.bind(to: self) { (self, isLoading) in
+            print("SignUp - \(isLoading ? "started" : "stopped") loading")
+        }
+        viewModel.showError.bind(to: self) { (self, error) in
+            print("SignUp - \(error ? "An" : "No") error occurred")
+        }
+        viewModel.updateForm.bind(to: self) { (self, _) in
+            self.navigateToThoughtList()
+        }
     }
     
     // MARK: - User Interaction
@@ -62,7 +79,7 @@ class SignUpViewController: UIViewController {
             present(alert, animated: true)
             return
         }
-        signUp(with: SignUp(
+        viewModel.doSignUp(with: SignUp(
             email: email,
             phonenumber: phonenumber,
             username: username,

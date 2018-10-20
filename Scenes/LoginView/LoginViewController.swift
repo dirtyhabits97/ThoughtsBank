@@ -81,6 +81,8 @@ extension LoginViewController {
     
     func navigateToSignUp() {
         let viewController = SignUpViewController()
+        let viewModel = SignUpViewModel()
+        viewController.viewModel = viewModel
         navigationController?.pushViewController(viewController, animated: true)
     }
     

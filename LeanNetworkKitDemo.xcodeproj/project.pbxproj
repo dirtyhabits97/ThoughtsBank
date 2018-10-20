@@ -41,9 +41,9 @@
 		EA3DDC13216A954F00D2DE91 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC12216A954F00D2DE91 /* SignUpView.swift */; };
 		EA3DDC15216AA7F400D2DE91 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC14216AA7F400D2DE91 /* SignUp.swift */; };
 		EA3DDC17216AA84000D2DE91 /* SignUpResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC16216AA84000D2DE91 /* SignUpResource.swift */; };
-		EA3DDC19216AA8D200D2DE91 /* SignUpViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC18216AA8D200D2DE91 /* SignUpViewController+Networking.swift */; };
 		EA71FB60217B087000DB91C5 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB5F217B087000DB91C5 /* Observables.swift */; };
 		EA71FB62217B997200DB91C5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB61217B997200DB91C5 /* LoginViewModel.swift */; };
+		EA71FB64217B9D6200DB91C5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */; };
 		EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A832169D52A004F9F3F /* LoginViewController.swift */; };
 		EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A862169D5B2004F9F3F /* Credentials.swift */; };
 		EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A8A2169D7A0004F9F3F /* LoginResource.swift */; };
@@ -98,9 +98,9 @@
 		EA3DDC12216A954F00D2DE91 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		EA3DDC14216AA7F400D2DE91 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		EA3DDC16216AA84000D2DE91 /* SignUpResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResource.swift; sourceTree = "<group>"; };
-		EA3DDC18216AA8D200D2DE91 /* SignUpViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+Networking.swift"; sourceTree = "<group>"; };
 		EA71FB5F217B087000DB91C5 /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		EA71FB61217B997200DB91C5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		EA961A832169D52A004F9F3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA961A862169D5B2004F9F3F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		EA961A8A2169D7A0004F9F3F /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				EA3DDC10216A953D00D2DE91 /* SignUpViewController.swift */,
-				EA3DDC18216AA8D200D2DE91 /* SignUpViewController+Networking.swift */,
 				EA3DDC12216A954F00D2DE91 /* SignUpView.swift */,
+				EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
@@ -394,6 +394,7 @@
 				EA1AA099216DA1FF00829667 /* Collection+Extensions.swift in Sources */,
 				EA1AA0BF2173B4CF00829667 /* UITextView+Extensions.swift in Sources */,
 				EA1AA0C62173BC0000829667 /* NewThoughtViewController+Networking.swift in Sources */,
+				EA71FB64217B9D6200DB91C5 /* SignUpViewModel.swift in Sources */,
 				EA3DDC11216A953D00D2DE91 /* SignUpViewController.swift in Sources */,
 				EA1AA0BD2172F4F500829667 /* NewThoughtView.swift in Sources */,
 				EA1AA0C22173B90700829667 /* Array+Extensions.swift in Sources */,
@@ -401,7 +402,6 @@
 				EA1AA0C42173B9A600829667 /* CreateThoughtResource.swift in Sources */,
 				EA3DDC0D216A8F4A00D2DE91 /* UIViewController+Extensions.swift in Sources */,
 				EA3DDC13216A954F00D2DE91 /* SignUpView.swift in Sources */,
-				EA3DDC19216AA8D200D2DE91 /* SignUpViewController+Networking.swift in Sources */,
 				EA3DDC05216A877000D2DE91 /* LoginView.swift in Sources */,
 				EA3DDC07216A88F000D2DE91 /* UIButton+Extensions.swift in Sources */,
 				EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */,
