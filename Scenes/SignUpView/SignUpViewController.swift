@@ -96,6 +96,8 @@ extension SignUpViewController {
     
     func navigateToThoughtList() {
         let viewController = ThoughtListViewController()
+        let viewModel = ThoughtListViewModel()
+        viewController.viewModel = viewModel
         UIApplication.shared.keyWindow?.rootViewController = viewController.embedInNavController()
     }
     

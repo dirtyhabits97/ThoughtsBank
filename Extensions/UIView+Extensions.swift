@@ -29,7 +29,7 @@ extension UIView {
 
 extension UIView {
     
-    public func addAndFill(subView view: UIView) {
+    public func addAndFill(withSubView view: UIView) {
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
@@ -41,8 +41,8 @@ extension UIView {
     public func embedInVerticalScrollView(relativeTo parentView: UIView) -> UIScrollView {
         let scrollView = UIScrollView()
         scrollView.contentInsetAdjustmentBehavior = .scrollableAxes
-        scrollView.addAndFill(subView: self)
-        parentView.addAndFill(subView: scrollView)
+        scrollView.addAndFill(withSubView: self)
+        parentView.addAndFill(withSubView: scrollView)
         let heightContraint = heightAnchor.constraint(equalTo: parentView.heightAnchor)
         heightContraint.priorityRaw = 250
         heightContraint.isActive = true
@@ -53,8 +53,8 @@ extension UIView {
     public func embedInHorizontalScrollView(relativeTo parentView: UIView) -> UIScrollView {
         let scrollView = UIScrollView()
         scrollView.contentInsetAdjustmentBehavior = .scrollableAxes
-        scrollView.addAndFill(subView: self)
-        parentView.addAndFill(subView: scrollView)
+        scrollView.addAndFill(withSubView: self)
+        parentView.addAndFill(withSubView: scrollView)
         let widthConstraint = widthAnchor.constraint(equalTo: parentView.widthAnchor)
         widthConstraint.priorityRaw = 250
         widthConstraint.isActive = true

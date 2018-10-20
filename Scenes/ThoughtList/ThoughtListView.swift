@@ -13,7 +13,7 @@ class ThoughtListView: UIView {
     // MARK: - UI Elements
     
     let tableView: UITableView = {
-        let view = UITableView()
+        let view = UITableView(frame: .zero, style: .grouped)
         return view
     }()
     
@@ -31,6 +31,7 @@ class ThoughtListView: UIView {
     
     private func setupView() {
         backgroundColor = .white
+        addAndFill(withSubView: tableView)
     }
     
 }

@@ -21,7 +21,7 @@ class NewThoughtView: VerticalScrollableView {
     
     override func setupView() {
         textView.delegate = self
-        containerView.addAndFill(subView: textView)
+        containerView.addAndFill(withSubView: textView)
     }
     
 }
