@@ -42,6 +42,7 @@
 		EA3DDC15216AA7F400D2DE91 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC14216AA7F400D2DE91 /* SignUp.swift */; };
 		EA3DDC17216AA84000D2DE91 /* SignUpResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC16216AA84000D2DE91 /* SignUpResource.swift */; };
 		EA3DDC19216AA8D200D2DE91 /* SignUpViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC18216AA8D200D2DE91 /* SignUpViewController+Networking.swift */; };
+		EA71FB60217B087000DB91C5 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB5F217B087000DB91C5 /* Observables.swift */; };
 		EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A832169D52A004F9F3F /* LoginViewController.swift */; };
 		EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A862169D5B2004F9F3F /* Credentials.swift */; };
 		EA961A892169D76E004F9F3F /* LoginViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A882169D76E004F9F3F /* LoginViewController+Networking.swift */; };
@@ -98,6 +99,7 @@
 		EA3DDC14216AA7F400D2DE91 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		EA3DDC16216AA84000D2DE91 /* SignUpResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResource.swift; sourceTree = "<group>"; };
 		EA3DDC18216AA8D200D2DE91 /* SignUpViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+Networking.swift"; sourceTree = "<group>"; };
+		EA71FB5F217B087000DB91C5 /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		EA961A832169D52A004F9F3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA961A862169D5B2004F9F3F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		EA961A882169D76E004F9F3F /* LoginViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Networking.swift"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				EA1AA0B22172D0C400829667 /* Thoughts */,
 				EA961A852169D5A7004F9F3F /* Login */,
 				EA28F0842160864E00FEBAB7 /* Resources */,
+				EA71FB5F217B087000DB91C5 /* Observables.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				EAFACEA421607AC0000DA0E4 /* NSAttributedString+Extensions.swift in Sources */,
 				EA1AA09C2172571F00829667 /* ThoughtListViewController.swift in Sources */,
 				EA1AA0A82172AA4100829667 /* Observer.swift in Sources */,
+				EA71FB60217B087000DB91C5 /* Observables.swift in Sources */,
 				EA1AA0A32172669400829667 /* BaseView.swift in Sources */,
 				EA1AA099216DA1FF00829667 /* Collection+Extensions.swift in Sources */,
 				EA1AA0BF2173B4CF00829667 /* UITextView+Extensions.swift in Sources */,
