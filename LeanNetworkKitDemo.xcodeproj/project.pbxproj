@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA1AA099216DA1FF00829667 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA098216DA1FF00829667 /* Collection+Extensions.swift */; };
 		EA1AA09C2172571F00829667 /* ThoughtListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA09B2172571F00829667 /* ThoughtListViewController.swift */; };
 		EA1AA09E2172573D00829667 /* ThoughtListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA09D2172573D00829667 /* ThoughtListView.swift */; };
 		EA1AA0A32172669400829667 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0A22172669400829667 /* BaseView.swift */; };
@@ -46,6 +45,8 @@
 		EA71FB68217BB17000DB91C5 /* ThoughtListCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB67217BB17000DB91C5 /* ThoughtListCells.swift */; };
 		EA71FB6A217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB69217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift */; };
 		EA71FB6C217BC1CA00DB91C5 /* NewThoughtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */; };
+		EA71FB6E217BF71100DB91C5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6D217BF71100DB91C5 /* AppCoordinator.swift */; };
+		EA71FB70217C044700DB91C5 /* Sequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6F217C044700DB91C5 /* Sequence+Extensions.swift */; };
 		EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A832169D52A004F9F3F /* LoginViewController.swift */; };
 		EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A862169D5B2004F9F3F /* Credentials.swift */; };
 		EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A8A2169D7A0004F9F3F /* LoginResource.swift */; };
@@ -71,7 +72,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA1AA098216DA1FF00829667 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		EA1AA09B2172571F00829667 /* ThoughtListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewController.swift; sourceTree = "<group>"; };
 		EA1AA09D2172573D00829667 /* ThoughtListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListView.swift; sourceTree = "<group>"; };
 		EA1AA0A02172635100829667 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
@@ -105,6 +105,8 @@
 		EA71FB67217BB17000DB91C5 /* ThoughtListCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListCells.swift; sourceTree = "<group>"; };
 		EA71FB69217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+Extensions.swift"; sourceTree = "<group>"; };
 		EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtViewModel.swift; sourceTree = "<group>"; };
+		EA71FB6D217BF71100DB91C5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EA71FB6F217C044700DB91C5 /* Sequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extensions.swift"; sourceTree = "<group>"; };
 		EA961A832169D52A004F9F3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA961A862169D5B2004F9F3F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		EA961A8A2169D7A0004F9F3F /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		EAFACE7D21603BAE000DA0E4 /* LeanNetworkKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EA71FB6D217BF71100DB91C5 /* AppCoordinator.swift */,
 				EAFACE7E21603BAE000DA0E4 /* AppDelegate.swift */,
 				EAFACE8521603BAF000DA0E4 /* Assets.xcassets */,
 				EAFACE8721603BAF000DA0E4 /* LaunchScreen.storyboard */,
@@ -296,11 +299,11 @@
 				EA3DDC08216A89CF00D2DE91 /* UIView+Extensions.swift */,
 				EA3DDC0A216A8C7700D2DE91 /* UIAlertController+Extensions.swift */,
 				EA3DDC0C216A8F4A00D2DE91 /* UIViewController+Extensions.swift */,
-				EA1AA098216DA1FF00829667 /* Collection+Extensions.swift */,
 				EA1AA0B02172BF5800829667 /* NSLayoutConstraint+Extensions.swift */,
 				EA1AA0A72172AA4100829667 /* Observer.swift */,
 				EA1AA0C12173B90700829667 /* Array+Extensions.swift */,
 				EA71FB69217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift */,
+				EA71FB6F217C044700DB91C5 /* Sequence+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */,
 				EA1AA0A621726E8700829667 /* ScrollableView.swift in Sources */,
 				EA3DDC002169E20500D2DE91 /* UITextField+Extensions.swift in Sources */,
+				EA71FB70217C044700DB91C5 /* Sequence+Extensions.swift in Sources */,
 				EA1AA0B12172BF5800829667 /* NSLayoutConstraint+Extensions.swift in Sources */,
 				EAFACE7F21603BAE000DA0E4 /* AppDelegate.swift in Sources */,
 				EA1AA0B42172D0D300829667 /* Thoughts.swift in Sources */,
@@ -398,7 +402,6 @@
 				EA1AA0A82172AA4100829667 /* Observer.swift in Sources */,
 				EA71FB60217B087000DB91C5 /* Observables.swift in Sources */,
 				EA1AA0A32172669400829667 /* BaseView.swift in Sources */,
-				EA1AA099216DA1FF00829667 /* Collection+Extensions.swift in Sources */,
 				EA1AA0BF2173B4CF00829667 /* UITextView+Extensions.swift in Sources */,
 				EA71FB64217B9D6200DB91C5 /* SignUpViewModel.swift in Sources */,
 				EA71FB68217BB17000DB91C5 /* ThoughtListCells.swift in Sources */,
@@ -408,6 +411,7 @@
 				EA3DDC032169E53C00D2DE91 /* UIColor+Extensions.swift in Sources */,
 				EA1AA0C42173B9A600829667 /* CreateThoughtResource.swift in Sources */,
 				EA3DDC0D216A8F4A00D2DE91 /* UIViewController+Extensions.swift in Sources */,
+				EA71FB6E217BF71100DB91C5 /* AppCoordinator.swift in Sources */,
 				EA3DDC13216A954F00D2DE91 /* SignUpView.swift in Sources */,
 				EA3DDC05216A877000D2DE91 /* LoginView.swift in Sources */,
 				EA71FB6A217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift in Sources */,

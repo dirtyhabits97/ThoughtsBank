@@ -38,9 +38,9 @@ class ThoughtListViewController: UIViewController, UITableViewDataSource {
     
     private func setupView() {
         // navigation bar
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .automatic
-        navigationItem.title = "Thoughts Bank"
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationItem.largeTitleDisplayMode = .automatic
+//        navigationItem.title = "Thoughts Bank"
         
         let newThought = UIBarButtonItem(
             barButtonSystemItem: .compose,
