@@ -40,12 +40,13 @@ class AppCoordinator: Coordinator {
     
 }
 
-class ThoughtListCoordinator: Coordinator {
+class ThoughtListCoordinator: Coordinator, ThoughtListViewControllerDelegate {
     
     // MARK: - Properties
     
     private let presenter: UINavigationController
     private let viewController: ThoughtListViewController!
+    private var newThoughtCoordinator: NewThoughtCoordinator?
     
     // MARK: - Initializers
     
@@ -53,6 +54,7 @@ class ThoughtListCoordinator: Coordinator {
         self.presenter = presenter
         viewController = ThoughtListViewController()
         viewController.viewModel = ThoughtListViewModel()
+        viewController.delegate = self
     }
     
     // MARK: - Coordinator methods
@@ -60,6 +62,74 @@ class ThoughtListCoordinator: Coordinator {
     func start() {
         viewController.title = "Thoughts Bank"
         presenter.pushViewController(viewController, animated: true)
+    }
+    
+    // MARK: - Delegate methods
+    
+    func didSelect(thought: Thought) {
+        print("Did select thought")
+        navigateToDetail()
+    }
+    
+    func didPressNewThoughtButton() {
+        print("Did press new thought button")
+        navigateToNewThought()
+    }
+    
+    // MARK: - Navigate methods
+    
+    func navigateToNewThought() {
+        let navController = UINavigationController()
+        navController.navigationBar.isTranslucent = false
+        navController.navigationBar.prefersLargeTitles = true
+        newThoughtCoordinator = NewThoughtCoordinator(presenter: navController)
+        newThoughtCoordinator?.start()
+        presenter.present(navController, animated: true)
+    }
+    
+    func navigateToDetail() {
+        
+    }
+    
+}
+
+class NewThoughtCoordinator: Coordinator, NewThoughtViewControllerDelegate {
+    
+    // MARK: - Properties
+    
+    private let presenter: UINavigationController
+    private let viewController: NewThoughtViewController!
+    
+    // MARK: - Initializers
+    
+    init(presenter: UINavigationController) {
+        self.presenter = presenter
+        viewController = NewThoughtViewController()
+        viewController.viewModel = NewThoughtViewModel()
+        viewController.delegate = self
+    }
+    
+    // MARK: - Coordinator methods
+    
+    func start() {
+        viewController.title = "New Thought"
+        presenter.pushViewController(viewController, animated: true)
+    }
+    
+    // MARK: - Delegate methods
+    
+    func didPressCancelButton() {
+        dismiss()
+    }
+    
+    func didFinishSaving() {
+        dismiss()
+    }
+    
+    // MARK: - Navigate methods
+    
+    func dismiss() {
+        presenter.dismiss(animated: true)
     }
     
 }

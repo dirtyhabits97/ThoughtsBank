@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol NewThoughtViewControllerDelegate: class {
+    func didPressCancelButton()
+    func didFinishSaving()
+}
+
 class NewThoughtViewController: UIViewController {
     
     // MARK: - Models
     
     public var viewModel: NewThoughtViewModelProtocol!
+    public weak var delegate: NewThoughtViewControllerDelegate?
     
     // MARK: - UI Elements
     
@@ -37,10 +43,6 @@ class NewThoughtViewController: UIViewController {
     }
     
     private func setupView() {
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .automatic
-        navigationItem.title = "New Thought"
         let createThoughtButton = UIBarButtonItem(title: "Create", style: .done, target: self, action: #selector(creatThoughtButtonPressed))
         navigationItem.rightBarButtonItem = createThoughtButton
         
@@ -57,7 +59,7 @@ class NewThoughtViewController: UIViewController {
         }
         viewModel.updateForm.bind(to: self) { (self, _) in
             print("New Thought - Created a new thought")
-            self.dismiss(animated: true)
+            self.delegate?.didFinishSaving()
         }
     }
     
@@ -72,7 +74,7 @@ class NewThoughtViewController: UIViewController {
     }
     
     @objc func cancelButtonPressed() {
-        dismiss(animated: true)
+        self.delegate?.didPressCancelButton()
     }
     
 }

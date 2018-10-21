@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ThoughtListViewController: UIViewController, UITableViewDataSource {
+protocol ThoughtListViewControllerDelegate: class {
+    func didSelect(thought: Thought)
+    func didPressNewThoughtButton()
+}
+
+class ThoughtListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Models
     
     public var viewModel: ThoughtListViewModelProtocol!
+    public weak var delegate: ThoughtListViewControllerDelegate?
     
     // MARK: - Objects
     
@@ -37,11 +43,6 @@ class ThoughtListViewController: UIViewController, UITableViewDataSource {
     }
     
     private func setupView() {
-        // navigation bar
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationItem.largeTitleDisplayMode = .automatic
-//        navigationItem.title = "Thoughts Bank"
-        
         let newThought = UIBarButtonItem(
             barButtonSystemItem: .compose,
             target: self,
@@ -54,6 +55,7 @@ class ThoughtListViewController: UIViewController, UITableViewDataSource {
         tableView.register(ThoughtListTableViewCell.self, forCellReuseIdentifier: ThoughtListTableViewCell.identifier)
         
         tableView.dataSource = self
+        tableView.delegate = self
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
@@ -78,7 +80,7 @@ class ThoughtListViewController: UIViewController, UITableViewDataSource {
     // MARK: - User Interaction
     
     @objc func newThoughtButtonPressed() {
-        navigateToNewThought()
+        delegate?.didPressNewThoughtButton()
     }
     
     // MARK: - TableView methods
@@ -97,15 +99,11 @@ class ThoughtListViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-}
-
-extension ThoughtListViewController {
-    
-    func navigateToNewThought() {
-        let viewController = NewThoughtViewController()
-        let viewModel = NewThoughtViewModel()
-        viewController.viewModel = viewModel
-        present(viewController.embedInNavController(), animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let thought = displayedThoughts[indexPath.section]
+        delegate?.didSelect(thought: thought)
+        
     }
     
 }
