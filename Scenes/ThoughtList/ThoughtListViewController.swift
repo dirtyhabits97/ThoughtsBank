@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol ThoughtListViewControllerDelegate: class {
-    func didSelect(thought: Thought)
-    func didPressNewThoughtButton()
-}
-
 class ThoughtListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Models

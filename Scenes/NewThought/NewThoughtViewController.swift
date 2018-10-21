@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol NewThoughtViewControllerDelegate: class {
-    func didPressCancelButton()
-    func didFinishSaving()
-}
-
 class NewThoughtViewController: UIViewController {
     
     // MARK: - Models
@@ -26,6 +21,10 @@ class NewThoughtViewController: UIViewController {
     private weak var newThoughtTextView: UITextView! { return newThoughtView.textView }
 
     // MARK: - View Lifecycle
+    
+    deinit {
+        print("Will deinit new thought view controller")
+    }
     
     override func loadView() {
         view = NewThoughtView()

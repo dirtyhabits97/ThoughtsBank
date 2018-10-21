@@ -47,6 +47,9 @@
 		EA71FB6C217BC1CA00DB91C5 /* NewThoughtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */; };
 		EA71FB6E217BF71100DB91C5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6D217BF71100DB91C5 /* AppCoordinator.swift */; };
 		EA71FB70217C044700DB91C5 /* Sequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6F217C044700DB91C5 /* Sequence+Extensions.swift */; };
+		EA71FB72217C539200DB91C5 /* NewThoughtCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB71217C539200DB91C5 /* NewThoughtCoordinator.swift */; };
+		EA71FB74217C53D500DB91C5 /* ThoughtListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB73217C53D500DB91C5 /* ThoughtListCoordinator.swift */; };
+		EA71FB76217C540900DB91C5 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB75217C540900DB91C5 /* SignUpCoordinator.swift */; };
 		EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A832169D52A004F9F3F /* LoginViewController.swift */; };
 		EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A862169D5B2004F9F3F /* Credentials.swift */; };
 		EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A8A2169D7A0004F9F3F /* LoginResource.swift */; };
@@ -107,6 +110,9 @@
 		EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtViewModel.swift; sourceTree = "<group>"; };
 		EA71FB6D217BF71100DB91C5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EA71FB6F217C044700DB91C5 /* Sequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extensions.swift"; sourceTree = "<group>"; };
+		EA71FB71217C539200DB91C5 /* NewThoughtCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtCoordinator.swift; sourceTree = "<group>"; };
+		EA71FB73217C53D500DB91C5 /* ThoughtListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListCoordinator.swift; sourceTree = "<group>"; };
+		EA71FB75217C540900DB91C5 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		EA961A832169D52A004F9F3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA961A862169D5B2004F9F3F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		EA961A8A2169D7A0004F9F3F /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 				EA1AA09D2172573D00829667 /* ThoughtListView.swift */,
 				EA71FB65217BADDF00DB91C5 /* ThoughtListViewModel.swift */,
 				EA71FB67217BB17000DB91C5 /* ThoughtListCells.swift */,
+				EA71FB73217C53D500DB91C5 /* ThoughtListCoordinator.swift */,
 			);
 			path = ThoughtList;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 				EA1AA0BA2172F46B00829667 /* NewThoughtViewController.swift */,
 				EA1AA0BC2172F4F500829667 /* NewThoughtView.swift */,
 				EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */,
+				EA71FB71217C539200DB91C5 /* NewThoughtCoordinator.swift */,
 			);
 			path = NewThought;
 			sourceTree = "<group>";
@@ -208,6 +216,7 @@
 				EA3DDC10216A953D00D2DE91 /* SignUpViewController.swift */,
 				EA3DDC12216A954F00D2DE91 /* SignUpView.swift */,
 				EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */,
+				EA71FB75217C540900DB91C5 /* SignUpCoordinator.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
@@ -396,6 +405,7 @@
 				EA71FB6C217BC1CA00DB91C5 /* NewThoughtViewModel.swift in Sources */,
 				EA3DDC09216A89CF00D2DE91 /* UIView+Extensions.swift in Sources */,
 				EA1AA0B62172D19F00829667 /* ThoughtListResource.swift in Sources */,
+				EA71FB76217C540900DB91C5 /* SignUpCoordinator.swift in Sources */,
 				EA3DDC0B216A8C7700D2DE91 /* UIAlertController+Extensions.swift in Sources */,
 				EAFACEA421607AC0000DA0E4 /* NSAttributedString+Extensions.swift in Sources */,
 				EA1AA09C2172571F00829667 /* ThoughtListViewController.swift in Sources */,
@@ -403,6 +413,7 @@
 				EA71FB60217B087000DB91C5 /* Observables.swift in Sources */,
 				EA1AA0A32172669400829667 /* BaseView.swift in Sources */,
 				EA1AA0BF2173B4CF00829667 /* UITextView+Extensions.swift in Sources */,
+				EA71FB74217C53D500DB91C5 /* ThoughtListCoordinator.swift in Sources */,
 				EA71FB64217B9D6200DB91C5 /* SignUpViewModel.swift in Sources */,
 				EA71FB68217BB17000DB91C5 /* ThoughtListCells.swift in Sources */,
 				EA3DDC11216A953D00D2DE91 /* SignUpViewController.swift in Sources */,
@@ -418,6 +429,7 @@
 				EA3DDC07216A88F000D2DE91 /* UIButton+Extensions.swift in Sources */,
 				EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */,
 				EA71FB62217B997200DB91C5 /* LoginViewModel.swift in Sources */,
+				EA71FB72217C539200DB91C5 /* NewThoughtCoordinator.swift in Sources */,
 				EA3DDC15216AA7F400D2DE91 /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

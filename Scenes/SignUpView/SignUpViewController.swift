@@ -13,6 +13,7 @@ class SignUpViewController: UIViewController {
     // MARK: - Models
     
     public var viewModel: SignUpViewModelProtocol!
+    public weak var delegate: SignUpViewControllerProtocol?
     
     // MARK: - UI Elements
     
@@ -27,6 +28,10 @@ class SignUpViewController: UIViewController {
     private let alert = UIAlertController.warningAlert()
     
     // MARK: View lifecycle
+    
+    deinit {
+        print("Will deinit signup view controller")
+    }
     
     override func loadView() {
         view = SignUpView()
@@ -52,7 +57,7 @@ class SignUpViewController: UIViewController {
             print("SignUp - \(error ? "An" : "No") error occurred")
         }
         viewModel.updateForm.bind(to: self) { (self, _) in
-            self.navigateToThoughtList()
+            self.delegate?.didFinishAuthentication()
         }
     }
     
@@ -88,7 +93,7 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func loginButtonPressed() {
-        navigationController?.popViewController(animated: true)
+        delegate?.didPressLoginButton()
     }
 }
 
