@@ -12,15 +12,11 @@ public class ScrollableView: UIView {
     
     // MARK: - Observers
     
-    private var keyboardWillShowObserver: NSObjectProtocol?
-    private var keyboardWillHideObserver: NSObjectProtocol?
+    private var keyboardObserver: KeyboardObserver?
     
     // MARK: - Properties
     
     public var orientation: Orientation { return .vertical }
-    public var reactToKeyboard: Bool = true {
-        didSet { setupKeyboardObserver() }
-    }
     
     // MARK: - UI Elements
     
@@ -31,6 +27,10 @@ public class ScrollableView: UIView {
     fileprivate var cvheightConstraint: NSLayoutConstraint?
     
     // MARK - View Lifecycle
+    
+    deinit {
+        keyboardObserver = nil
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,13 +46,6 @@ public class ScrollableView: UIView {
         setupScrollView()
         setupConstraints()
         setupKeyboardObserver()
-    }
-    
-    deinit {
-        keyboardWillShowObserver?.stopObserving()
-        keyboardWillHideObserver?.stopObserving()
-        keyboardWillShowObserver = nil
-        keyboardWillHideObserver = nil
     }
     
     public func setupView() {
@@ -77,17 +70,9 @@ public class ScrollableView: UIView {
     }
     
     private func setupKeyboardObserver() {
-        guard reactToKeyboard else {
-            keyboardWillShowObserver?.stopObserving()
-            keyboardWillHideObserver?.stopObserving()
-            keyboardWillShowObserver = nil
-            keyboardWillHideObserver = nil
-            return
-        }
-        guard keyboardWillShowObserver == nil && keyboardWillHideObserver == nil else {
-            return
-        }
-        keyboardWillShowObserver = addKeyboardWillShowObserver({ (notification) in
+        guard keyboardObserver == nil else { return }
+        keyboardObserver = KeyboardObserver()
+        keyboardObserver?.keyboardWillShow.bind(to: self, completion: { (self, notification) in
             self.svbottomConstraint.isActive = false
             self.svbottomConstraint = self.scrollView?.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -notification.keyboardHeight)
             self.svbottomConstraint.isActive = true
@@ -95,9 +80,8 @@ public class ScrollableView: UIView {
             self.cvheightConstraint?.isActive = false
             self.cvheightConstraint = self.containerView.heightAnchor.constraint(equalTo: self.heightAnchor, constant: -notification.keyboardHeight)
             self.cvheightConstraint?.isActive = true
-            
         })
-        keyboardWillHideObserver = addKeyboardWillHideObserver({ (notification) in
+        keyboardObserver?.keyboardWillHide.bind(to: self, completion: { (self, notification) in
             self.svbottomConstraint.isActive = false
             self.svbottomConstraint = self.scrollView?.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             self.svbottomConstraint.isActive = true
