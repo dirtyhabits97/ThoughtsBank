@@ -89,21 +89,3 @@ class LoginViewController: UIViewController {
     }
     
 }
-
-extension LoginViewController {
-    
-    func navigateToSignUp() {
-        let viewController = SignUpViewController()
-        let viewModel = SignUpViewModel()
-        viewController.viewModel = viewModel
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    func navigateToThoughtList() {
-        let viewController = ThoughtListViewController()
-        let viewModel = ThoughtListViewModel()
-        viewController.viewModel = viewModel
-        UIApplication.shared.keyWindow?.rootViewController = viewController.embedInNavController()
-    }
-    
-}

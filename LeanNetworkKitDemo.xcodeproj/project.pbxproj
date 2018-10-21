@@ -201,7 +201,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		EA3DDC0E216A951D00D2DE91 /* LoginView */ = {
+		EA3DDC0E216A951D00D2DE91 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				EA961A832169D52A004F9F3F /* LoginViewController.swift */,
@@ -209,10 +209,10 @@
 				EA71FB61217B997200DB91C5 /* LoginViewModel.swift */,
 				EA71FB77217C576700DB91C5 /* LoginCoordinator.swift */,
 			);
-			path = LoginView;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		EA3DDC0F216A952800D2DE91 /* SignUpView */ = {
+		EA3DDC0F216A952800D2DE91 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 				EA3DDC10216A953D00D2DE91 /* SignUpViewController.swift */,
@@ -220,7 +220,7 @@
 				EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */,
 				EA71FB75217C540900DB91C5 /* SignUpCoordinator.swift */,
 			);
-			path = SignUpView;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		EA961A852169D5A7004F9F3F /* Login */ = {
@@ -271,8 +271,8 @@
 			children = (
 				EA1AA0B92172F45C00829667 /* NewThought */,
 				EA1AA09A217255D500829667 /* ThoughtList */,
-				EA3DDC0F216A952800D2DE91 /* SignUpView */,
-				EA3DDC0E216A951D00D2DE91 /* LoginView */,
+				EA3DDC0F216A952800D2DE91 /* SignUp */,
+				EA3DDC0E216A951D00D2DE91 /* Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
