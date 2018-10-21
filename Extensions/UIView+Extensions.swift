@@ -20,7 +20,7 @@ extension UIView {
         set { layer.borderColor = newValue?.cgColor }
     }
     
-    public var round: CGFloat {
+    public var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
         set { layer.cornerRadius = newValue }
     }

@@ -9,10 +9,6 @@
 import Foundation
 
 extension Sequence {
-    // https://www.youtube.com/watch?v=CTZOjl6_NuY
-    func pair() -> AnySequence<(Element, Element)> {
-        return AnySequence(zip(self, self.dropFirst()))
-    }
     
     func group<Key>(by key: (Element) -> Key) -> [Key: [Element]] {
         return reduce(into: [Key: [Element]](), { (result, element) in
@@ -31,6 +27,11 @@ extension Sequence {
             }
         }
         return uniqueElements
+    }
+    
+    // https://www.youtube.com/watch?v=CTZOjl6_NuY
+    func pair() -> AnySequence<(Element, Element)> {
+        return AnySequence(zip(self, self.dropFirst()))
     }
     
     func all(_ predicate: (Element) -> Bool) -> Bool {

@@ -38,9 +38,10 @@ class AppCoordinator: Coordinator {
     let window: UIWindow
     var rootViewController: UINavigationController!
     
+    var didFinish = Observable<Coordinator>()
     var childCoordinators: [Coordinator] = []
     
-    var didFinish = Observable<Coordinator>()
+    var isAuthenticated = false
     
     // MARK: - Initializers
     
@@ -51,7 +52,11 @@ class AppCoordinator: Coordinator {
     // MARK: - Coordinator methods
     
     func start() {
-        navigateToAuthentication()
+        if isAuthenticated {
+            navigateToThoughtList()
+        } else {
+            navigateToAuthentication()
+        }
     }
     
     // MARK: - Navigate methods
