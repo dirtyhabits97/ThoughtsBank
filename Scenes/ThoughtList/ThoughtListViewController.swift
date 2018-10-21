@@ -53,7 +53,7 @@ class ThoughtListViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.delegate = self
 
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 60
+        tableView.estimatedRowHeight = 56
         tableView.sectionHeaderHeight = 8
         tableView.sectionFooterHeight = 8
     }

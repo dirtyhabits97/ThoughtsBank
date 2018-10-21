@@ -15,7 +15,7 @@ class SignUpView: LoginView {
         textField.placeholder = "Email"
         textField.borderColor = .gray
         textField.borderWidth = 1
-        textField.round = 10
+        textField.cornerRadius = 10
         return textField
     }()
     
@@ -24,7 +24,7 @@ class SignUpView: LoginView {
         textField.placeholder = "Phone number"
         textField.borderColor = .gray
         textField.borderWidth = 1
-        textField.round = 10
+        textField.cornerRadius = 10
         return textField
     }()
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThoughtListView: UIView {
+class ThoughtListView: BaseView {
     
     // MARK: - UI Elements
     
@@ -19,17 +19,7 @@ class ThoughtListView: UIView {
     
     // MARK: - View Lifecycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
-    }
-    
-    private func setupView() {
+    override func setupView() {
         backgroundColor = .white
         addAndFill(withSubView: tableView)
     }

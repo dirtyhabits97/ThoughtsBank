@@ -17,7 +17,7 @@ class LoginView: VerticalScrollableView {
         textField.placeholder = "Username"
         textField.borderColor = .gray
         textField.borderWidth = 1
-        textField.round = 10
+        textField.cornerRadius = 10
         return textField
     }()
     
@@ -26,7 +26,7 @@ class LoginView: VerticalScrollableView {
         textField.placeholder = "Password"
         textField.borderColor = .gray
         textField.borderWidth = 1
-        textField.round = 10
+        textField.cornerRadius = 10
         return textField
     }()
     
