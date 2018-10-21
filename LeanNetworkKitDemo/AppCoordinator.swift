@@ -36,7 +36,7 @@ class AppCoordinator: Coordinator {
     // MARK: - Properties
     
     let window: UIWindow
-    let rootViewController: UINavigationController
+    var rootViewController: UINavigationController!
     
     var childCoordinators: [Coordinator] = []
     
@@ -46,13 +46,33 @@ class AppCoordinator: Coordinator {
     
     init(window: UIWindow) {
         self.window = window
-        self.rootViewController = UINavigationController()
-        rootViewController.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - Coordinator methods
     
     func start() {
+        navigateToAuthentication()
+    }
+    
+    // MARK: - Navigate methods
+    
+    func navigateToAuthentication() {
+        rootViewController = UINavigationController()
+        rootViewController.isNavigationBarHidden = true
+        rootViewController.navigationBar.prefersLargeTitles = true
+        let coordinator = LoginCoordinator(presenter: rootViewController)
+        window.rootViewController = rootViewController
+        coordinator.start()
+        addChild(coordinator)
+        coordinator.didFinish.bind(to: self) { (self, coordinator) in
+            self.removeChild(coordinator)
+            self.navigateToThoughtList()
+        }
+    }
+    
+    func navigateToThoughtList() {
+        rootViewController = UINavigationController()
+        rootViewController.navigationBar.prefersLargeTitles = true
         let coordinator = ThoughtListCoordinator(presenter: rootViewController)
         window.rootViewController = rootViewController
         coordinator.start()

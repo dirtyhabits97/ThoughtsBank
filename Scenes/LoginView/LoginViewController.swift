@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     // MARK: - Models
     
     public var viewModel: LoginViewModelProtocol!
+    public weak var delegate: AuthenticationViewControllerDelegate?
     
     // MARK: - UI Elements
     
@@ -26,6 +27,10 @@ class LoginViewController: UIViewController {
     
     // MARK: - View Lifecycle
     
+    deinit {
+        print("Will deinit login view controller")
+    }
+    
     override func loadView() {
         view = LoginView()
     }
@@ -38,7 +43,6 @@ class LoginViewController: UIViewController {
     
     private func setupView() {
         view.backgroundColor = .white
-        navigationController?.isNavigationBarHidden = true
         loginButton.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
         signupButton.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
     }
@@ -51,7 +55,7 @@ class LoginViewController: UIViewController {
             print("Login - \(error ? "An" : "No") error occurred")
         }
         viewModel.updateForm.bind(to: self) { (self, _) in
-            self.navigateToThoughtList()
+            self.delegate?.didFinishAuthentication()
         }
     }
     
@@ -72,7 +76,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func signupButtonPressed() {
-        navigateToSignUp()
+        delegate?.didPressSignUpButton()
     }
     
 }

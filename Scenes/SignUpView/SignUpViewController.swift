@@ -13,7 +13,7 @@ class SignUpViewController: UIViewController {
     // MARK: - Models
     
     public var viewModel: SignUpViewModelProtocol!
-    public weak var delegate: SignUpViewControllerProtocol?
+    public weak var delegate: AuthenticationViewControllerDelegate?
     
     // MARK: - UI Elements
     

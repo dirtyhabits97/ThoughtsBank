@@ -1,5 +1,5 @@
 //
-//  SignUpCoordinator.swift
+//  LoginCoordinator.swift
 //  LeanNetworkKitDemo
 //
 //  Created by Gonzalo Reyes Huertas on 10/21/18.
@@ -8,33 +8,26 @@
 
 import UIKit
 
-protocol AuthenticationViewControllerDelegate: AnyObject {
-    func didFinishAuthentication()
-    func didPressLoginButton()
-    func didPressSignUpButton()
-}
-
-class SignUpCoordinator: Coordinator, AuthenticationViewControllerDelegate {
+class LoginCoordinator: Coordinator, AuthenticationViewControllerDelegate {
     
     // MARK: - Properties
     
     private weak var presenter: UINavigationController!
-    private let viewController: SignUpViewController
+    private let viewController: LoginViewController
     
     var didFinish = Observable<Coordinator>()
-    var didAuthenticate = Observable<Void>()
     var childCoordinators: [Coordinator] = []
     
     // MARK: - Initializers
     
     deinit {
-        print("Will deinit signup coordinator")
+        print("Will deinit login coordinator")
     }
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
-        viewController = SignUpViewController()
-        viewController.viewModel = SignUpViewModel()
+        viewController = LoginViewController()
+        viewController.viewModel = LoginViewModel()
         viewController.delegate = self
     }
     
@@ -50,24 +43,27 @@ class SignUpCoordinator: Coordinator, AuthenticationViewControllerDelegate {
         navigateToThoughtList()
     }
     
-    func didPressLoginButton() {
-        navigateToLogin()
+    func didPressSignUpButton() {
+        navigateToSignUp()
     }
     
-    func didPressSignUpButton() {
+    func didPressLoginButton() {
         // do nothing
     }
     
     // MARK: - Navigate methods
     
-    func navigateToLogin() {
-        presenter.popViewController(animated: true)
+    func navigateToThoughtList() {
         didFinish.notify(with: self)
     }
     
-    func navigateToThoughtList() {
-        didFinish.notify(with: self)
-        didAuthenticate.notify(with: ())
+    func navigateToSignUp() {
+        let coordinator = SignUpCoordinator(presenter: presenter)
+        coordinator.start()
+        addChild(coordinator)
+        coordinator.didAuthenticate.bind(to: self) { (self, _) in
+            self.didFinish.notify(with: self)
+        }
     }
     
 }
