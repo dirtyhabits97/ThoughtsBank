@@ -25,10 +25,6 @@ class NewThoughtCoordinator: Coordinator, NewThoughtViewControllerDelegate {
     
     // MARK: - Initializers
     
-    deinit {
-        print("Will deinit new thought coordinator")
-    }
-    
     init(presenter: UINavigationController) {
         self.presenter = presenter
         viewController = NewThoughtViewController()

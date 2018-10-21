@@ -20,10 +20,6 @@ class LoginCoordinator: Coordinator, AuthenticationViewControllerDelegate {
     
     // MARK: - Initializers
     
-    deinit {
-        print("Will deinit login coordinator")
-    }
-    
     init(presenter: UINavigationController) {
         self.presenter = presenter
         viewController = LoginViewController()

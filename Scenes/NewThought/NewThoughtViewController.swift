@@ -22,10 +22,6 @@ class NewThoughtViewController: UIViewController {
 
     // MARK: - View Lifecycle
     
-    deinit {
-        print("Will deinit new thought view controller")
-    }
-    
     override func loadView() {
         view = NewThoughtView()
     }

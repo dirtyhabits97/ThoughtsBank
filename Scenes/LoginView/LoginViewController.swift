@@ -27,10 +27,6 @@ class LoginViewController: UIViewController {
     
     // MARK: - View Lifecycle
     
-    deinit {
-        print("Will deinit login view controller")
-    }
-    
     override func loadView() {
         view = LoginView()
     }
@@ -39,6 +35,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupBindings()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideKeyboard()
     }
     
     private func setupView() {
@@ -77,6 +78,14 @@ class LoginViewController: UIViewController {
     
     @objc func signupButtonPressed() {
         delegate?.didPressSignUpButton()
+    }
+    
+    private func hideKeyboard() {
+        if usernameTextField.isFirstResponder {
+            usernameTextField.resignFirstResponder()
+        } else if passwordTextField.isFirstResponder {
+            passwordTextField.resignFirstResponder()
+        }
     }
     
 }

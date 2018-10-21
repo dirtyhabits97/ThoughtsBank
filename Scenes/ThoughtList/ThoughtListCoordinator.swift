@@ -42,12 +42,12 @@ class ThoughtListCoordinator: Coordinator, ThoughtListViewControllerDelegate {
     // MARK: - Delegate methods
     
     func didSelect(thought: Thought) {
-        print("Did select thought")
+        print("ThoughtList - Did select thought")
         navigateToDetail()
     }
     
     func didPressNewThoughtButton() {
-        print("Did press new thought button")
+        print("ThoughtList - Did press new thought button")
         navigateToNewThought()
     }
     
@@ -64,7 +64,7 @@ class ThoughtListCoordinator: Coordinator, ThoughtListViewControllerDelegate {
     }
     
     func navigateToDetail() {
-        print("Navigate to detail")
+        print("ThoughtList - Navigate to detail")
     }
     
 }

@@ -19,10 +19,6 @@ class NewThoughtView: VerticalScrollableView, UITextViewDelegate {
     
     // MARK: - View Lifecycle
     
-    deinit {
-        print("Will deinit new thought view")
-    }
-    
     override func setupView() {
         textView.delegate = self
         containerView.addAndFill(withSubView: textView)

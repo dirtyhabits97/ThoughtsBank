@@ -29,10 +29,6 @@ class SignUpViewController: UIViewController {
     
     // MARK: View lifecycle
     
-    deinit {
-        print("Will deinit signup view controller")
-    }
-    
     override func loadView() {
         view = SignUpView()
     }
@@ -41,6 +37,11 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupBindings()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideKeyboard()
     }
     
     private func setupView() {
@@ -95,15 +96,16 @@ class SignUpViewController: UIViewController {
     @objc func loginButtonPressed() {
         delegate?.didPressLoginButton()
     }
-}
-
-extension SignUpViewController {
     
-    func navigateToThoughtList() {
-        let viewController = ThoughtListViewController()
-        let viewModel = ThoughtListViewModel()
-        viewController.viewModel = viewModel
-        UIApplication.shared.keyWindow?.rootViewController = viewController.embedInNavController()
+    private func hideKeyboard() {
+        if emailTextField.isFirstResponder {
+            emailTextField.resignFirstResponder()
+        } else if phoneNumberTextField.isFirstResponder {
+            phoneNumberTextField.resignFirstResponder()
+        } else if usernameTextField.isFirstResponder {
+            usernameTextField.resignFirstResponder()
+        } else if passwordTextField.isFirstResponder {
+            passwordTextField.resignFirstResponder()
+        }
     }
-    
 }

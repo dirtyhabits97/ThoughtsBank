@@ -27,10 +27,6 @@ class SignUpCoordinator: Coordinator, AuthenticationViewControllerDelegate {
     
     // MARK: - Initializers
     
-    deinit {
-        print("Will deinit signup coordinator")
-    }
-    
     init(presenter: UINavigationController) {
         self.presenter = presenter
         viewController = SignUpViewController()
