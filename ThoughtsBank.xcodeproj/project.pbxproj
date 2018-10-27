@@ -79,7 +79,7 @@
 		EA961A832169D52A004F9F3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA961A862169D5B2004F9F3F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		EA961A8A2169D7A0004F9F3F /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
-		EAFACE7B21603BAE000DA0E4 /* LeanNetworkKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanNetworkKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFACE7B21603BAE000DA0E4 /* ThoughtsBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtsBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFACE7E21603BAE000DA0E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFACE8521603BAF000DA0E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAFACE8821603BAF000DA0E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				EA1AA09F2172633900829667 /* UIClasses */,
 				EAFACE9321603C2B000DA0E4 /* Models */,
 				EAFACE9021603BD1000DA0E4 /* Scenes */,
-				EAFACE7D21603BAE000DA0E4 /* LeanNetworkKitDemo */,
+				EAFACE7D21603BAE000DA0E4 /* ThoughtsBank */,
 				EAFACE7C21603BAE000DA0E4 /* Products */,
 				EAFACE9621603F5F000DA0E4 /* Frameworks */,
 			);
@@ -209,12 +209,12 @@
 		EAFACE7C21603BAE000DA0E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EAFACE7B21603BAE000DA0E4 /* LeanNetworkKitDemo.app */,
+				EAFACE7B21603BAE000DA0E4 /* ThoughtsBank.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EAFACE7D21603BAE000DA0E4 /* LeanNetworkKitDemo */ = {
+		EAFACE7D21603BAE000DA0E4 /* ThoughtsBank */ = {
 			isa = PBXGroup;
 			children = (
 				EA71FB6D217BF71100DB91C5 /* AppCoordinator.swift */,
@@ -223,7 +223,7 @@
 				EAFACE8721603BAF000DA0E4 /* LaunchScreen.storyboard */,
 				EAFACE8A21603BAF000DA0E4 /* Info.plist */,
 			);
-			path = LeanNetworkKitDemo;
+			path = ThoughtsBank;
 			sourceTree = "<group>";
 		};
 		EAFACE9021603BD1000DA0E4 /* Scenes */ = {
@@ -261,9 +261,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EAFACE7A21603BAE000DA0E4 /* LeanNetworkKitDemo */ = {
+		EAFACE7A21603BAE000DA0E4 /* ThoughtsBank */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EAFACE8D21603BAF000DA0E4 /* Build configuration list for PBXNativeTarget "LeanNetworkKitDemo" */;
+			buildConfigurationList = EAFACE8D21603BAF000DA0E4 /* Build configuration list for PBXNativeTarget "ThoughtsBank" */;
 			buildPhases = (
 				EAFACE7721603BAE000DA0E4 /* Sources */,
 				EAFACE7821603BAE000DA0E4 /* Frameworks */,
@@ -274,9 +274,9 @@
 			);
 			dependencies = (
 			);
-			name = LeanNetworkKitDemo;
+			name = ThoughtsBank;
 			productName = LeanNetworkKitDemo;
-			productReference = EAFACE7B21603BAE000DA0E4 /* LeanNetworkKitDemo.app */;
+			productReference = EAFACE7B21603BAE000DA0E4 /* ThoughtsBank.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -294,7 +294,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EAFACE7621603BAE000DA0E4 /* Build configuration list for PBXProject "LeanNetworkKitDemo" */;
+			buildConfigurationList = EAFACE7621603BAE000DA0E4 /* Build configuration list for PBXProject "ThoughtsBank" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -307,7 +307,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EAFACE7A21603BAE000DA0E4 /* LeanNetworkKitDemo */,
+				EAFACE7A21603BAE000DA0E4 /* ThoughtsBank */,
 			);
 		};
 /* End PBXProject section */
@@ -526,13 +526,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = LeanNetworkKitDemo/Info.plist;
+				INFOPLIST_FILE = ThoughtsBank/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gerh.LeanNetworkKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerh.ThoughtsBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -549,13 +549,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = LeanNetworkKitDemo/Info.plist;
+				INFOPLIST_FILE = ThoughtsBank/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gerh.LeanNetworkKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerh.ThoughtsBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,7 +565,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EAFACE7621603BAE000DA0E4 /* Build configuration list for PBXProject "LeanNetworkKitDemo" */ = {
+		EAFACE7621603BAE000DA0E4 /* Build configuration list for PBXProject "ThoughtsBank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAFACE8B21603BAF000DA0E4 /* Debug */,
@@ -574,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EAFACE8D21603BAF000DA0E4 /* Build configuration list for PBXNativeTarget "LeanNetworkKitDemo" */ = {
+		EAFACE8D21603BAF000DA0E4 /* Build configuration list for PBXNativeTarget "ThoughtsBank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAFACE8E21603BAF000DA0E4 /* Debug */,
