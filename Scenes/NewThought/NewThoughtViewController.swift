@@ -63,8 +63,9 @@ class NewThoughtViewController: UIViewController {
     @objc func creatThoughtButtonPressed() {
         guard newThoughtTextView.isClean else { return }
         var thoughtTextRaw = newThoughtTextView.text.split(separator: "\n", maxSplits: 1).map(String.init)
-        guard let title = thoughtTextRaw.popFirst() else { return }
-        let message = thoughtTextRaw.popFirst()
+        guard !thoughtTextRaw.isEmpty else { return }
+        let title = thoughtTextRaw[0]
+        let message = thoughtTextRaw.count == 2 ? thoughtTextRaw[1] : nil
         viewModel.createNewThought(title: title, message: message)
     }
     

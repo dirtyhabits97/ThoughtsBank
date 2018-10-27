@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanToolsKit
 
 class SignUpViewController: UIViewController {
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanUIKit
 
 class LoginView: VerticalScrollableView {
     
@@ -31,7 +32,7 @@ class LoginView: VerticalScrollableView {
     }()
     
     public let loginButton: UIButton = {
-        let button = UIButton.roundedButton(round: 10)
+        let button = UIButton.roundedButton(cornerRadius: 10)
         button.titleForNormal = "Login"
         button.backgroundColor = .black
         return button

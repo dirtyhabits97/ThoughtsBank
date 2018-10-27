@@ -12,40 +12,27 @@
 		EA1AA0A32172669400829667 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0A22172669400829667 /* BaseView.swift */; };
 		EA1AA0A621726E8700829667 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0A02172635100829667 /* ScrollableView.swift */; };
 		EA1AA0AB2172ACB400829667 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0AA2172ACB400829667 /* KeyboardObserver.swift */; };
-		EA1AA0B12172BF5800829667 /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0B02172BF5800829667 /* NSLayoutConstraint+Extensions.swift */; };
 		EA1AA0B42172D0D300829667 /* Thoughts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0B32172D0D300829667 /* Thoughts.swift */; };
 		EA1AA0B62172D19F00829667 /* ThoughtListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0B52172D19F00829667 /* ThoughtListResource.swift */; };
 		EA1AA0BB2172F46B00829667 /* NewThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0BA2172F46B00829667 /* NewThoughtViewController.swift */; };
 		EA1AA0BD2172F4F500829667 /* NewThoughtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0BC2172F4F500829667 /* NewThoughtView.swift */; };
-		EA1AA0BF2173B4CF00829667 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0BE2173B4CE00829667 /* UITextView+Extensions.swift */; };
-		EA1AA0C22173B90700829667 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0C12173B90700829667 /* Array+Extensions.swift */; };
 		EA1AA0C42173B9A600829667 /* CreateThoughtResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0C32173B9A600829667 /* CreateThoughtResource.swift */; };
-		EA28F07C21607F1600FEBAB7 /* LeanToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFACE9A21603FDD000DA0E4 /* LeanToolsKit.framework */; };
-		EA28F07D21607F1600FEBAB7 /* LeanNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFACE9921603FDD000DA0E4 /* LeanNetworkKit.framework */; };
-		EA28F0802160841B00FEBAB7 /* LeanToolsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAFACE9A21603FDD000DA0E4 /* LeanToolsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA28F0822160846800FEBAB7 /* LeanNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFACE9921603FDD000DA0E4 /* LeanNetworkKit.framework */; };
-		EA28F0832160846800FEBAB7 /* LeanNetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAFACE9921603FDD000DA0E4 /* LeanNetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA28F08C2160928E00FEBAB7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28F08B2160928E00FEBAB7 /* String+Extensions.swift */; };
-		EA3DDC002169E20500D2DE91 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDBFF2169E20500D2DE91 /* UITextField+Extensions.swift */; };
-		EA3DDC032169E53C00D2DE91 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC022169E53C00D2DE91 /* UIColor+Extensions.swift */; };
 		EA3DDC05216A877000D2DE91 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC04216A877000D2DE91 /* LoginView.swift */; };
-		EA3DDC07216A88F000D2DE91 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC06216A88F000D2DE91 /* UIButton+Extensions.swift */; };
-		EA3DDC09216A89CF00D2DE91 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC08216A89CF00D2DE91 /* UIView+Extensions.swift */; };
 		EA3DDC0B216A8C7700D2DE91 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC0A216A8C7700D2DE91 /* UIAlertController+Extensions.swift */; };
-		EA3DDC0D216A8F4A00D2DE91 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC0C216A8F4A00D2DE91 /* UIViewController+Extensions.swift */; };
 		EA3DDC11216A953D00D2DE91 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC10216A953D00D2DE91 /* SignUpViewController.swift */; };
 		EA3DDC13216A954F00D2DE91 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC12216A954F00D2DE91 /* SignUpView.swift */; };
 		EA3DDC15216AA7F400D2DE91 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC14216AA7F400D2DE91 /* SignUp.swift */; };
 		EA3DDC17216AA84000D2DE91 /* SignUpResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DDC16216AA84000D2DE91 /* SignUpResource.swift */; };
+		EA4BCEF9218500BA006939FA /* LeanUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4BCEF6218500B9006939FA /* LeanUIKit.framework */; };
+		EA4BCEFA218500BA006939FA /* LeanNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4BCEF7218500BA006939FA /* LeanNetworkKit.framework */; };
+		EA4BCEFB218500BA006939FA /* LeanToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4BCEF8218500BA006939FA /* LeanToolsKit.framework */; };
 		EA71FB60217B087000DB91C5 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB5F217B087000DB91C5 /* Observables.swift */; };
 		EA71FB62217B997200DB91C5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB61217B997200DB91C5 /* LoginViewModel.swift */; };
 		EA71FB64217B9D6200DB91C5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */; };
 		EA71FB66217BADDF00DB91C5 /* ThoughtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB65217BADDF00DB91C5 /* ThoughtListViewModel.swift */; };
 		EA71FB68217BB17000DB91C5 /* ThoughtListCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB67217BB17000DB91C5 /* ThoughtListCells.swift */; };
-		EA71FB6A217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB69217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift */; };
 		EA71FB6C217BC1CA00DB91C5 /* NewThoughtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */; };
 		EA71FB6E217BF71100DB91C5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6D217BF71100DB91C5 /* AppCoordinator.swift */; };
-		EA71FB70217C044700DB91C5 /* Sequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB6F217C044700DB91C5 /* Sequence+Extensions.swift */; };
 		EA71FB72217C539200DB91C5 /* NewThoughtCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB71217C539200DB91C5 /* NewThoughtCoordinator.swift */; };
 		EA71FB74217C53D500DB91C5 /* ThoughtListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB73217C53D500DB91C5 /* ThoughtListCoordinator.swift */; };
 		EA71FB76217C540900DB91C5 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB75217C540900DB91C5 /* SignUpCoordinator.swift */; };
@@ -56,23 +43,7 @@
 		EAFACE7F21603BAE000DA0E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFACE7E21603BAE000DA0E4 /* AppDelegate.swift */; };
 		EAFACE8621603BAF000DA0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFACE8521603BAF000DA0E4 /* Assets.xcassets */; };
 		EAFACE8921603BAF000DA0E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFACE8721603BAF000DA0E4 /* LaunchScreen.storyboard */; };
-		EAFACEA421607AC0000DA0E4 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFACEA321607AC0000DA0E4 /* NSAttributedString+Extensions.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		EA28F0812160841B00FEBAB7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EA28F0832160846800FEBAB7 /* LeanNetworkKit.framework in Embed Frameworks */,
-				EA28F0802160841B00FEBAB7 /* LeanToolsKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EA1AA09B2172571F00829667 /* ThoughtListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewController.swift; sourceTree = "<group>"; };
@@ -80,35 +51,27 @@
 		EA1AA0A02172635100829667 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
 		EA1AA0A22172669400829667 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EA1AA0AA2172ACB400829667 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
-		EA1AA0B02172BF5800829667 /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
 		EA1AA0B32172D0D300829667 /* Thoughts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thoughts.swift; sourceTree = "<group>"; };
 		EA1AA0B52172D19F00829667 /* ThoughtListResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListResource.swift; sourceTree = "<group>"; };
 		EA1AA0BA2172F46B00829667 /* NewThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtViewController.swift; sourceTree = "<group>"; };
 		EA1AA0BC2172F4F500829667 /* NewThoughtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtView.swift; sourceTree = "<group>"; };
-		EA1AA0BE2173B4CE00829667 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
-		EA1AA0C12173B90700829667 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		EA1AA0C32173B9A600829667 /* CreateThoughtResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThoughtResource.swift; sourceTree = "<group>"; };
-		EA28F08B2160928E00FEBAB7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		EA3DDBFF2169E20500D2DE91 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
-		EA3DDC022169E53C00D2DE91 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		EA3DDC04216A877000D2DE91 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		EA3DDC06216A88F000D2DE91 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
-		EA3DDC08216A89CF00D2DE91 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		EA3DDC0A216A8C7700D2DE91 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
-		EA3DDC0C216A8F4A00D2DE91 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		EA3DDC10216A953D00D2DE91 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EA3DDC12216A954F00D2DE91 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		EA3DDC14216AA7F400D2DE91 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		EA3DDC16216AA84000D2DE91 /* SignUpResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResource.swift; sourceTree = "<group>"; };
+		EA4BCEF6218500B9006939FA /* LeanUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanUIKit.framework; path = Carthage/Build/iOS/LeanUIKit.framework; sourceTree = "<group>"; };
+		EA4BCEF7218500BA006939FA /* LeanNetworkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanNetworkKit.framework; path = Carthage/Build/iOS/LeanNetworkKit.framework; sourceTree = "<group>"; };
+		EA4BCEF8218500BA006939FA /* LeanToolsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanToolsKit.framework; path = Carthage/Build/iOS/LeanToolsKit.framework; sourceTree = "<group>"; };
 		EA71FB5F217B087000DB91C5 /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		EA71FB61217B997200DB91C5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		EA71FB65217BADDF00DB91C5 /* ThoughtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewModel.swift; sourceTree = "<group>"; };
 		EA71FB67217BB17000DB91C5 /* ThoughtListCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListCells.swift; sourceTree = "<group>"; };
-		EA71FB69217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+Extensions.swift"; sourceTree = "<group>"; };
 		EA71FB6B217BC1CA00DB91C5 /* NewThoughtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtViewModel.swift; sourceTree = "<group>"; };
 		EA71FB6D217BF71100DB91C5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		EA71FB6F217C044700DB91C5 /* Sequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extensions.swift"; sourceTree = "<group>"; };
 		EA71FB71217C539200DB91C5 /* NewThoughtCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtCoordinator.swift; sourceTree = "<group>"; };
 		EA71FB73217C53D500DB91C5 /* ThoughtListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListCoordinator.swift; sourceTree = "<group>"; };
 		EA71FB75217C540900DB91C5 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
@@ -122,9 +85,6 @@
 		EAFACE8821603BAF000DA0E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAFACE8A21603BAF000DA0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAFACE9721603F60000DA0E4 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		EAFACE9921603FDD000DA0E4 /* LeanNetworkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanNetworkKit.framework; path = Carthage/Build/iOS/LeanNetworkKit.framework; sourceTree = "<group>"; };
-		EAFACE9A21603FDD000DA0E4 /* LeanToolsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanToolsKit.framework; path = Carthage/Build/iOS/LeanToolsKit.framework; sourceTree = "<group>"; };
-		EAFACEA321607AC0000DA0E4 /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,9 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA28F07C21607F1600FEBAB7 /* LeanToolsKit.framework in Frameworks */,
-				EA28F0822160846800FEBAB7 /* LeanNetworkKit.framework in Frameworks */,
-				EA28F07D21607F1600FEBAB7 /* LeanNetworkKit.framework in Frameworks */,
+				EA4BCEF9218500BA006939FA /* LeanUIKit.framework in Frameworks */,
+				EA4BCEFA218500BA006939FA /* LeanNetworkKit.framework in Frameworks */,
+				EA4BCEFB218500BA006939FA /* LeanToolsKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +118,7 @@
 			children = (
 				EA1AA0A22172669400829667 /* BaseView.swift */,
 				EA1AA0A02172635100829667 /* ScrollableView.swift */,
+				EA3DDC0A216A8C7700D2DE91 /* UIAlertController+Extensions.swift */,
 			);
 			path = UIClasses;
 			sourceTree = "<group>";
@@ -237,7 +198,6 @@
 			children = (
 				EA1AA0A92172ACA700829667 /* Observers */,
 				EA1AA09F2172633900829667 /* UIClasses */,
-				EAFACEA221607AB1000DA0E4 /* Extensions */,
 				EAFACE9321603C2B000DA0E4 /* Models */,
 				EAFACE9021603BD1000DA0E4 /* Scenes */,
 				EAFACE7D21603BAE000DA0E4 /* LeanNetworkKitDemo */,
@@ -290,31 +250,12 @@
 		EAFACE9621603F5F000DA0E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EAFACE9921603FDD000DA0E4 /* LeanNetworkKit.framework */,
-				EAFACE9A21603FDD000DA0E4 /* LeanToolsKit.framework */,
+				EA4BCEF7218500BA006939FA /* LeanNetworkKit.framework */,
+				EA4BCEF8218500BA006939FA /* LeanToolsKit.framework */,
+				EA4BCEF6218500B9006939FA /* LeanUIKit.framework */,
 				EAFACE9721603F60000DA0E4 /* Cartfile */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EAFACEA221607AB1000DA0E4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EA3DDBFF2169E20500D2DE91 /* UITextField+Extensions.swift */,
-				EA1AA0BE2173B4CE00829667 /* UITextView+Extensions.swift */,
-				EAFACEA321607AC0000DA0E4 /* NSAttributedString+Extensions.swift */,
-				EA28F08B2160928E00FEBAB7 /* String+Extensions.swift */,
-				EA3DDC022169E53C00D2DE91 /* UIColor+Extensions.swift */,
-				EA3DDC06216A88F000D2DE91 /* UIButton+Extensions.swift */,
-				EA3DDC08216A89CF00D2DE91 /* UIView+Extensions.swift */,
-				EA3DDC0A216A8C7700D2DE91 /* UIAlertController+Extensions.swift */,
-				EA3DDC0C216A8F4A00D2DE91 /* UIViewController+Extensions.swift */,
-				EA1AA0B02172BF5800829667 /* NSLayoutConstraint+Extensions.swift */,
-				EA1AA0C12173B90700829667 /* Array+Extensions.swift */,
-				EA71FB69217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift */,
-				EA71FB6F217C044700DB91C5 /* Sequence+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,7 +268,7 @@
 				EAFACE7721603BAE000DA0E4 /* Sources */,
 				EAFACE7821603BAE000DA0E4 /* Frameworks */,
 				EAFACE7921603BAE000DA0E4 /* Resources */,
-				EA28F0812160841B00FEBAB7 /* Embed Frameworks */,
+				EA4BCEFC218500D3006939FA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -383,6 +324,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EA4BCEFC218500D3006939FA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LeanToolsKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/LeanUIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/LeanNetworkKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EAFACE7721603BAE000DA0E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -392,41 +356,29 @@
 				EA1AA0AB2172ACB400829667 /* KeyboardObserver.swift in Sources */,
 				EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */,
 				EA1AA0A621726E8700829667 /* ScrollableView.swift in Sources */,
-				EA3DDC002169E20500D2DE91 /* UITextField+Extensions.swift in Sources */,
-				EA71FB70217C044700DB91C5 /* Sequence+Extensions.swift in Sources */,
-				EA1AA0B12172BF5800829667 /* NSLayoutConstraint+Extensions.swift in Sources */,
 				EAFACE7F21603BAE000DA0E4 /* AppDelegate.swift in Sources */,
 				EA1AA0B42172D0D300829667 /* Thoughts.swift in Sources */,
 				EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */,
 				EA1AA0BB2172F46B00829667 /* NewThoughtViewController.swift in Sources */,
 				EA3DDC17216AA84000D2DE91 /* SignUpResource.swift in Sources */,
-				EA28F08C2160928E00FEBAB7 /* String+Extensions.swift in Sources */,
 				EA1AA09E2172573D00829667 /* ThoughtListView.swift in Sources */,
 				EA71FB6C217BC1CA00DB91C5 /* NewThoughtViewModel.swift in Sources */,
-				EA3DDC09216A89CF00D2DE91 /* UIView+Extensions.swift in Sources */,
 				EA1AA0B62172D19F00829667 /* ThoughtListResource.swift in Sources */,
 				EA71FB76217C540900DB91C5 /* SignUpCoordinator.swift in Sources */,
 				EA3DDC0B216A8C7700D2DE91 /* UIAlertController+Extensions.swift in Sources */,
-				EAFACEA421607AC0000DA0E4 /* NSAttributedString+Extensions.swift in Sources */,
 				EA1AA09C2172571F00829667 /* ThoughtListViewController.swift in Sources */,
 				EA71FB60217B087000DB91C5 /* Observables.swift in Sources */,
 				EA1AA0A32172669400829667 /* BaseView.swift in Sources */,
-				EA1AA0BF2173B4CF00829667 /* UITextView+Extensions.swift in Sources */,
 				EA71FB74217C53D500DB91C5 /* ThoughtListCoordinator.swift in Sources */,
 				EA71FB78217C576700DB91C5 /* LoginCoordinator.swift in Sources */,
 				EA71FB64217B9D6200DB91C5 /* SignUpViewModel.swift in Sources */,
 				EA71FB68217BB17000DB91C5 /* ThoughtListCells.swift in Sources */,
 				EA3DDC11216A953D00D2DE91 /* SignUpViewController.swift in Sources */,
 				EA1AA0BD2172F4F500829667 /* NewThoughtView.swift in Sources */,
-				EA1AA0C22173B90700829667 /* Array+Extensions.swift in Sources */,
-				EA3DDC032169E53C00D2DE91 /* UIColor+Extensions.swift in Sources */,
 				EA1AA0C42173B9A600829667 /* CreateThoughtResource.swift in Sources */,
-				EA3DDC0D216A8F4A00D2DE91 /* UIViewController+Extensions.swift in Sources */,
 				EA71FB6E217BF71100DB91C5 /* AppCoordinator.swift in Sources */,
 				EA3DDC13216A954F00D2DE91 /* SignUpView.swift in Sources */,
 				EA3DDC05216A877000D2DE91 /* LoginView.swift in Sources */,
-				EA71FB6A217BB7C300DB91C5 /* NSLayoutAnchor+Extensions.swift in Sources */,
-				EA3DDC07216A88F000D2DE91 /* UIButton+Extensions.swift in Sources */,
 				EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */,
 				EA71FB62217B997200DB91C5 /* LoginViewModel.swift in Sources */,
 				EA71FB72217C539200DB91C5 /* NewThoughtCoordinator.swift in Sources */,
