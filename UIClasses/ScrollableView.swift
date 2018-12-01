@@ -6,6 +6,7 @@
 //  Copyright © 2018 Gonzalo Reyes Huertas. All rights reserved.
 //
 
+import TBFoundation
 import UIKit
 
 public class ScrollableView: UIView {

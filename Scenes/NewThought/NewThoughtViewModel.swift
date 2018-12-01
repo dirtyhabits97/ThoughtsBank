@@ -6,7 +6,7 @@
 //  Copyright © 2018 Gonzalo Reyes Huertas. All rights reserved.
 //
 
-import Foundation
+import TBFoundation
 import LeanNetworkKit
 
 protocol NewThoughtViewModelProtocol: AnyObject {

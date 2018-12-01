@@ -12,6 +12,8 @@ public struct Observable<Observed> {
     
     private var completion: ((Observed) -> Void)?
     
+    public init() {}
+    
     public mutating func bind<Observer: AnyObject>(to observer: Observer, completion: @escaping (Observer, Observed) -> Void) {
         self.completion = { [weak observer] observed in
             guard let obs = observer else { return }
@@ -28,6 +30,8 @@ public struct Observable<Observed> {
 public struct ObservableNotification<Observed: TBNotification> {
     
     private var observer: NSObjectProtocol?
+    
+    public init() {}
     
     public mutating func bind<Observer: AnyObject>(to observer: Observer, completion: @escaping (Observer, Observed) -> Void) {
         self.observer = NotificationCenter.default.addObserver(
