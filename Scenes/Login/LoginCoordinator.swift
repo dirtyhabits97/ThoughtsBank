@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginCoordinator: Coordinator, AuthenticationViewControllerDelegate {
+final class LoginCoordinator: Coordinator, AuthenticationViewControllerDelegate {
     
     // MARK: - Properties
     

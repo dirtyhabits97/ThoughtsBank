@@ -13,7 +13,7 @@ protocol ThoughtListViewControllerDelegate: AnyObject {
     func didPressNewThoughtButton()
 }
 
-class ThoughtListCoordinator: Coordinator, ThoughtListViewControllerDelegate {
+final class ThoughtListCoordinator: Coordinator, ThoughtListViewControllerDelegate {
     
     // MARK: - Properties
     

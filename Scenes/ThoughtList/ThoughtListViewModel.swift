@@ -9,15 +9,15 @@
 import Foundation
 import LeanNetworkKit
 
-protocol ThoughtListViewModelProtocol {
-    var isLoading: Observable<Bool> { get }
-    var showError: Observable<Bool> { get }
-    var updateForm: Observable<[Thought]> { get }
+protocol ThoughtListViewModelProtocol: AnyObject {
+    var isLoading: Observable<Bool> { get set }
+    var showError: Observable<Bool> { get set }
+    var updateForm: Observable<[Thought]> { get set }
     
     func loadData()
 }
 
-class ThoughtListViewModel: ThoughtListViewModelProtocol {
+final class ThoughtListViewModel: ThoughtListViewModelProtocol {
     
     // MARK: - Observables
     

@@ -10,27 +10,24 @@ import UIKit
 
 public class ScrollableView: UIView {
     
-    // MARK: - Observers
+    // MARK: - Observables
     
-    private var keyboardObserver: KeyboardObserver?
+    private var keyboardWillShow = ObservableNotification<KeyboardWillShowNotification>()
+    private var keyboardWillHide = ObservableNotification<KeyboardWillHideNotification>()
     
     // MARK: - Properties
     
     public var orientation: Orientation { return .vertical }
     
-    // MARK: - UI Elements
+    // MARK: - UI elements
     
     public let containerView: UIView = UIView()
-    public fileprivate(set) var scrollView: UIScrollView!
+    public private(set) var scrollView: UIScrollView!
     
-    fileprivate var svbottomConstraint: NSLayoutConstraint!
-    fileprivate var cvheightConstraint: NSLayoutConstraint?
+    private var svbottomConstraint: NSLayoutConstraint!
+    private var cvheightConstraint: NSLayoutConstraint?
     
-    // MARK - View Lifecycle
-    
-    deinit {
-        keyboardObserver = nil
-    }
+    // MARK - View lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,7 +57,7 @@ public class ScrollableView: UIView {
         containerView.addSubview(view)
     }
     
-    fileprivate func setupScrollView() {
+    private func setupScrollView() {
         switch orientation {
             case .vertical: scrollView = containerView.embedInVerticalScrollView(relativeTo: self)
             case .horizontal: scrollView = containerView.embedInHorizontalScrollView(relativeTo: self)
@@ -70,26 +67,31 @@ public class ScrollableView: UIView {
     }
     
     private func setupKeyboardObserver() {
-        guard keyboardObserver == nil else { return }
-        keyboardObserver = KeyboardObserver()
-        keyboardObserver?.keyboardWillShow.bind(to: self, completion: { (self, notification) in
+        keyboardWillShow.bind(to: self) { (self, notification) in
             self.svbottomConstraint.isActive = false
-            self.svbottomConstraint = self.scrollView?.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -notification.keyboardHeight)
+            self.svbottomConstraint = self.scrollView.bottomAnchor.constraint(
+                equalTo: self.bottomAnchor,
+                constant: -notification.keyboardHeight
+            )
             self.svbottomConstraint.isActive = true
             
             self.cvheightConstraint?.isActive = false
-            self.cvheightConstraint = self.containerView.heightAnchor.constraint(equalTo: self.heightAnchor, constant: -notification.keyboardHeight)
+            self.cvheightConstraint = self.containerView.heightAnchor.constraint(
+                equalTo: self.heightAnchor,
+                constant: -notification.keyboardHeight
+            )
             self.cvheightConstraint?.isActive = true
-        })
-        keyboardObserver?.keyboardWillHide.bind(to: self, completion: { (self, notification) in
+        }
+        
+        keyboardWillHide.bind(to: self) { (self, notification) in
             self.svbottomConstraint.isActive = false
-            self.svbottomConstraint = self.scrollView?.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            self.svbottomConstraint = self.scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             self.svbottomConstraint.isActive = true
             
             self.cvheightConstraint?.isActive = false
             self.cvheightConstraint = self.containerView.heightAnchor.constraint(equalTo: self.heightAnchor)
             self.cvheightConstraint?.isActive = true
-        })
+        }
     }
     
 }

@@ -14,7 +14,7 @@ protocol AuthenticationViewControllerDelegate: AnyObject {
     func didPressSignUpButton()
 }
 
-class SignUpCoordinator: Coordinator, AuthenticationViewControllerDelegate {
+final class SignUpCoordinator: Coordinator, AuthenticationViewControllerDelegate {
     
     // MARK: - Properties
     

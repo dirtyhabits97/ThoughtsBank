@@ -13,7 +13,7 @@ protocol NewThoughtViewControllerDelegate: AnyObject {
     func didFinishSaving()
 }
 
-class NewThoughtCoordinator: Coordinator, NewThoughtViewControllerDelegate {
+final class NewThoughtCoordinator: Coordinator, NewThoughtViewControllerDelegate {
     
     // MARK: - Properties
     

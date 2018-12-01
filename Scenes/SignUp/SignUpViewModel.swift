@@ -9,15 +9,15 @@
 import Foundation
 import LeanNetworkKit
 
-protocol SignUpViewModelProtocol {
-    var isLoading: Observable<Bool> { get }
-    var updateForm: Observable<Void> { get }
-    var showError: Observable<Bool> { get }
+protocol SignUpViewModelProtocol: AnyObject {
+    var isLoading: Observable<Bool> { get set }
+    var updateForm: Observable<Void> { get set }
+    var showError: Observable<Bool> { get set }
     
     func doSignUp(with userInformation: SignUp)
 }
 
-class SignUpViewModel: SignUpViewModelProtocol {
+final class SignUpViewModel: SignUpViewModelProtocol {
     
     // MARK: - Observables
     

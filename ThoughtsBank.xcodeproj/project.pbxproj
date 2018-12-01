@@ -11,7 +11,7 @@
 		EA1AA09E2172573D00829667 /* ThoughtListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA09D2172573D00829667 /* ThoughtListView.swift */; };
 		EA1AA0A32172669400829667 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0A22172669400829667 /* BaseView.swift */; };
 		EA1AA0A621726E8700829667 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0A02172635100829667 /* ScrollableView.swift */; };
-		EA1AA0AB2172ACB400829667 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0AA2172ACB400829667 /* KeyboardObserver.swift */; };
+		EA1AA0AB2172ACB400829667 /* KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0AA2172ACB400829667 /* KeyboardNotifications.swift */; };
 		EA1AA0B42172D0D300829667 /* Thoughts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0B32172D0D300829667 /* Thoughts.swift */; };
 		EA1AA0B62172D19F00829667 /* ThoughtListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0B52172D19F00829667 /* ThoughtListResource.swift */; };
 		EA1AA0BB2172F46B00829667 /* NewThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AA0BA2172F46B00829667 /* NewThoughtViewController.swift */; };
@@ -40,6 +40,7 @@
 		EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A832169D52A004F9F3F /* LoginViewController.swift */; };
 		EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A862169D5B2004F9F3F /* Credentials.swift */; };
 		EA961A8B2169D7A0004F9F3F /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA961A8A2169D7A0004F9F3F /* LoginResource.swift */; };
+		EADAC48721B2DE6800FDB854 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAC48621B2DE6800FDB854 /* Notifications.swift */; };
 		EAFACE7F21603BAE000DA0E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFACE7E21603BAE000DA0E4 /* AppDelegate.swift */; };
 		EAFACE8621603BAF000DA0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFACE8521603BAF000DA0E4 /* Assets.xcassets */; };
 		EAFACE8921603BAF000DA0E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFACE8721603BAF000DA0E4 /* LaunchScreen.storyboard */; };
@@ -50,7 +51,7 @@
 		EA1AA09D2172573D00829667 /* ThoughtListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListView.swift; sourceTree = "<group>"; };
 		EA1AA0A02172635100829667 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
 		EA1AA0A22172669400829667 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		EA1AA0AA2172ACB400829667 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		EA1AA0AA2172ACB400829667 /* KeyboardNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotifications.swift; sourceTree = "<group>"; };
 		EA1AA0B32172D0D300829667 /* Thoughts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thoughts.swift; sourceTree = "<group>"; };
 		EA1AA0B52172D19F00829667 /* ThoughtListResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListResource.swift; sourceTree = "<group>"; };
 		EA1AA0BA2172F46B00829667 /* NewThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThoughtViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		EA961A832169D52A004F9F3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA961A862169D5B2004F9F3F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		EA961A8A2169D7A0004F9F3F /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
+		EADAC48621B2DE6800FDB854 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		EAFACE7B21603BAE000DA0E4 /* ThoughtsBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtsBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFACE7E21603BAE000DA0E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFACE8521603BAF000DA0E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,13 +125,12 @@
 			path = UIClasses;
 			sourceTree = "<group>";
 		};
-		EA1AA0A92172ACA700829667 /* Observers */ = {
+		EA1AA0A92172ACA700829667 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				EA71FB5F217B087000DB91C5 /* Observables.swift */,
-				EA1AA0AA2172ACB400829667 /* KeyboardObserver.swift */,
+				EA1AA0AA2172ACB400829667 /* KeyboardNotifications.swift */,
 			);
-			path = Observers;
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		EA1AA0B22172D0C400829667 /* Thoughts */ = {
@@ -193,10 +194,20 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		EADAC48821B2ED9200FDB854 /* TBFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				EA71FB5F217B087000DB91C5 /* Observables.swift */,
+				EADAC48621B2DE6800FDB854 /* Notifications.swift */,
+			);
+			path = TBFoundation;
+			sourceTree = "<group>";
+		};
 		EAFACE7221603BAE000DA0E4 = {
 			isa = PBXGroup;
 			children = (
-				EA1AA0A92172ACA700829667 /* Observers */,
+				EADAC48821B2ED9200FDB854 /* TBFoundation */,
+				EA1AA0A92172ACA700829667 /* Notifications */,
 				EA1AA09F2172633900829667 /* UIClasses */,
 				EAFACE9321603C2B000DA0E4 /* Models */,
 				EAFACE9021603BD1000DA0E4 /* Scenes */,
@@ -353,13 +364,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA71FB66217BADDF00DB91C5 /* ThoughtListViewModel.swift in Sources */,
-				EA1AA0AB2172ACB400829667 /* KeyboardObserver.swift in Sources */,
+				EA1AA0AB2172ACB400829667 /* KeyboardNotifications.swift in Sources */,
 				EA961A842169D52A004F9F3F /* LoginViewController.swift in Sources */,
 				EA1AA0A621726E8700829667 /* ScrollableView.swift in Sources */,
 				EAFACE7F21603BAE000DA0E4 /* AppDelegate.swift in Sources */,
 				EA1AA0B42172D0D300829667 /* Thoughts.swift in Sources */,
 				EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */,
 				EA1AA0BB2172F46B00829667 /* NewThoughtViewController.swift in Sources */,
+				EADAC48721B2DE6800FDB854 /* Notifications.swift in Sources */,
 				EA3DDC17216AA84000D2DE91 /* SignUpResource.swift in Sources */,
 				EA1AA09E2172573D00829667 /* ThoughtListView.swift in Sources */,
 				EA71FB6C217BC1CA00DB91C5 /* NewThoughtViewModel.swift in Sources */,

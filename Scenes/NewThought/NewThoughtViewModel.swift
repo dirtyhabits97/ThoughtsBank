@@ -9,15 +9,15 @@
 import Foundation
 import LeanNetworkKit
 
-protocol NewThoughtViewModelProtocol {
-    var isLoading: Observable<Bool> { get }
-    var showError: Observable<Bool> { get }
-    var updateForm: Observable<Void> { get }
+protocol NewThoughtViewModelProtocol: AnyObject {
+    var isLoading: Observable<Bool> { get set }
+    var showError: Observable<Bool> { get set }
+    var updateForm: Observable<Void> { get set }
     
     func createNewThought(title: String, message: String?)
 }
 
-class NewThoughtViewModel: NewThoughtViewModelProtocol {
+final class NewThoughtViewModel: NewThoughtViewModelProtocol {
     
     // MARK: - Observables
     
