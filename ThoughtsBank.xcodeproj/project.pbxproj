@@ -26,6 +26,7 @@
 		EA4BCEF9218500BA006939FA /* LeanUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4BCEF6218500B9006939FA /* LeanUIKit.framework */; };
 		EA4BCEFA218500BA006939FA /* LeanNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4BCEF7218500BA006939FA /* LeanNetworkKit.framework */; };
 		EA4BCEFB218500BA006939FA /* LeanToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4BCEF8218500BA006939FA /* LeanToolsKit.framework */; };
+		EA638D0B21BC878A00BA7EDB /* Unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA638D0A21BC878A00BA7EDB /* Unique.swift */; };
 		EA71FB62217B997200DB91C5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB61217B997200DB91C5 /* LoginViewModel.swift */; };
 		EA71FB64217B9D6200DB91C5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */; };
 		EA71FB66217BADDF00DB91C5 /* ThoughtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FB65217BADDF00DB91C5 /* ThoughtListViewModel.swift */; };
@@ -93,6 +94,7 @@
 		EA4BCEF6218500B9006939FA /* LeanUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanUIKit.framework; path = Carthage/Build/iOS/LeanUIKit.framework; sourceTree = "<group>"; };
 		EA4BCEF7218500BA006939FA /* LeanNetworkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanNetworkKit.framework; path = Carthage/Build/iOS/LeanNetworkKit.framework; sourceTree = "<group>"; };
 		EA4BCEF8218500BA006939FA /* LeanToolsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanToolsKit.framework; path = Carthage/Build/iOS/LeanToolsKit.framework; sourceTree = "<group>"; };
+		EA638D0A21BC878A00BA7EDB /* Unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unique.swift; sourceTree = "<group>"; };
 		EA71FB5F217B087000DB91C5 /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		EA71FB61217B997200DB91C5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EA71FB63217B9D6200DB91C5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				EADAC49121B2F0F200FDB854 /* Metadata */,
 				EA71FB5F217B087000DB91C5 /* Observables.swift */,
 				EADAC48621B2DE6800FDB854 /* Notifications.swift */,
+				EADAC49321B2F0F200FDB854 /* Info.plist */,
 			);
 			path = TBFoundation;
 			sourceTree = "<group>";
@@ -246,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				EADAC49221B2F0F200FDB854 /* TBFoundation.h */,
-				EADAC49321B2F0F200FDB854 /* Info.plist */,
 			);
 			path = Metadata;
 			sourceTree = "<group>";
@@ -303,6 +305,7 @@
 				EA1AA0B22172D0C400829667 /* Thoughts */,
 				EA961A852169D5A7004F9F3F /* Login */,
 				EA28F0842160864E00FEBAB7 /* Resources */,
+				EA638D0A21BC878A00BA7EDB /* Unique.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				EAFACE7F21603BAE000DA0E4 /* AppDelegate.swift in Sources */,
 				EA1AA0B42172D0D300829667 /* Thoughts.swift in Sources */,
 				EA961A872169D5B2004F9F3F /* Credentials.swift in Sources */,
+				EA638D0B21BC878A00BA7EDB /* Unique.swift in Sources */,
 				EA1AA0BB2172F46B00829667 /* NewThoughtViewController.swift in Sources */,
 				EA3DDC17216AA84000D2DE91 /* SignUpResource.swift in Sources */,
 				EA1AA09E2172573D00829667 /* ThoughtListView.swift in Sources */,

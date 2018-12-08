@@ -21,4 +21,12 @@ struct Thought {
     }
 }
 
-extension Thought: Decodable {}
+extension Thought: Decodable { }
+
+extension Thought: Unique {
+    
+    var identifier: String {
+        return id
+    }
+    
+}
