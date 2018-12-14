@@ -68,12 +68,85 @@ class LoginView: VerticalScrollableView {
     }
     
     override func setupConstraints() {
-        stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24).isActive = true
-        stackView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+//        stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24).isActive = true
+//        stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24).isActive = true
+//        stackView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+        stackView.leadingAnchor ~~= containerView.leadingAnchor + 24
+        stackView.trailingAnchor ~~= containerView.trailingAnchor - 24
+        stackView.centerYAnchor ~~= containerView.centerYAnchor
+        stackView.widthAnchor ~~= containerView.widthAnchor
         
         haveAnAccountButton.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
         haveAnAccountButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -24).isActive = true
         haveAnAccountButton.topAnchor.constraint(greaterThanOrEqualTo: stackView.bottomAnchor, constant: 24).isActive = true
     }
+}
+
+precedencegroup SBLayoutConstraintPrecedence {
+    associativity: left
+    higherThan: AdditionPrecedence
+}
+
+infix operator ~~=: SBLayoutConstraintPrecedence
+infix operator ~~<: SBLayoutConstraintPrecedence
+infix operator ~~>: SBLayoutConstraintPrecedence
+
+@discardableResult
+func ~~=(lhs: NSLayoutYAxisAnchor, rhs: NSLayoutYAxisAnchor) -> NSLayoutConstraint {
+    return lhs.equals(anchor: rhs)
+}
+
+@discardableResult
+func ~~=(lhs: NSLayoutXAxisAnchor, rhs: NSLayoutXAxisAnchor) -> NSLayoutConstraint {
+    return lhs.equals(anchor: rhs)
+}
+
+@discardableResult
+func ~~=(lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
+    return lhs.equals(anchor: rhs)
+}
+
+
+@discardableResult
+func ~~>(lhs: NSLayoutYAxisAnchor, rhs: NSLayoutYAxisAnchor) -> NSLayoutConstraint {
+    return lhs.lessOrEquals(anchor: rhs)
+}
+
+@discardableResult
+func ~~>(lhs: NSLayoutXAxisAnchor, rhs: NSLayoutXAxisAnchor) -> NSLayoutConstraint {
+    return lhs.lessOrEquals(anchor: rhs)
+}
+
+@discardableResult
+func ~~>(lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
+    return lhs.lessOrEquals(anchor: rhs)
+}
+
+
+@discardableResult
+func ~~<(lhs: NSLayoutYAxisAnchor, rhs: NSLayoutYAxisAnchor) -> NSLayoutConstraint {
+    return lhs.greaterOrEquals(anchor: rhs)
+}
+
+@discardableResult
+func ~~<(lhs: NSLayoutXAxisAnchor, rhs: NSLayoutXAxisAnchor) -> NSLayoutConstraint {
+    return lhs.greaterOrEquals(anchor: rhs)
+}
+
+@discardableResult
+func ~~<(lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
+    return lhs.greaterOrEquals(anchor: rhs)
+}
+
+
+@discardableResult
+func +(lhs: NSLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
+    lhs.constant += rhs
+    return lhs
+}
+
+@discardableResult
+func -(lhs: NSLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
+    lhs.constant -= rhs
+    return lhs
 }
